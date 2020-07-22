@@ -1,0 +1,37 @@
+<nav class="nav" role="navigation">
+  <ul class="nav__list">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <li>
+      <!-- <a {{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} class="active"
+        {{end}} href="{{ .URL }}">{{ .Name }}</a> -->
+      <a {{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Section .Identifier) }} class="active" {{end}}
+        href="{{ .URL | relLangURL }}">{{ i18n .Name }}</a>
+    </li>
+    {{ end }}
+    <li>
+      <select id="select-language" onchange="location = this.value;">
+        {{ $siteLanguages := .Site.Languages}}
+        {{ $pageLang := .Page.Lang}}
+        {{ range .Page.AllTranslations }}
+        {{ $translation := .}}
+        {{ range $siteLanguages }}
+        {{ if eq $translation.Lang .Lang }}
+        {{ $selected := false }}
+        {{ if eq $pageLang .Lang}}
+        <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}" selected>{{ .LanguageName }}
+        </option>
+        {{ else }}
+        <option id="{{ $translation.Language }}" value="{{ $translation.Permalink }}">{{ .LanguageName }}</option>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        {{ end }}
+      </select>
+    </li>
+    <!-- <li>
+      <a href="" class='button -blue center'>EN</a>
+      <a href="" class='button -blue center'>ZH</a>
+    </li> -->
+  </ul>
+</nav>

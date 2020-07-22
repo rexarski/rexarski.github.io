@@ -1,17 +1,15 @@
-# REMOVE THIS
-themesDir = "../../"
-
 # DO NOT REMOVE THIS
+
 theme = "hugo-theme-codex"
 
 # Override these settings with your own
-baseURL = "https://example.org/"
-copyright = "© {year}"
+baseURL = "https://interetro.xyz/"
 languageCode = "en-us"
-title = "codex"
+# DefaultContentLanguage = "en-us"
+title = "test field"
 
 # Add your Disqus shortname here.
-# disqusShortname = ""
+disqusShortname = "rexarski"
 
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
 # googleAnalytics = "" 
@@ -23,23 +21,24 @@ title = "codex"
 dateFormat = "Jan 2 2006"
 
 # Links to your social accounts, comment/uncomment as needed. Icons will be displayed for those specified.
-github = "https://github.com/<your handle>"
-twitter = "https://twitter.com/<your handle>"
-# email = "mailto:<your email>"
+email = "mailto:qiurui416@gmail.com"
+github = "https://github.com/rexarski"
+twitter = "https://twitter.com/rexarski"
 # facebook = "https://facebook.com/<your handle>"
 # gitlab = "https://gitlab.com/<your handle>"
 # instagram = "https://instagram.com/<your handle>"
 # linkedin = "<link to your profile>"
 # youtube = "https://www.youtube.com/channel/<your channel>"
+blog = "https://interetro.rbind.io"
 
 # Titles for your icons (shown as tooltips), and also their display order.
 # Currently, these icons are supported: 
 #   "Twitter", "GitHub", "Email", "Facebook", "GitLab", "Instagram", "LinkedIn", "YouTube"
-iconTitles = ["Twitter", "GitHub"]
+iconTitles = ["Twitter", "GitHub", "Email", "Blog"]
 
 # Metadata for Twitter cards, defaults to params.twitter
-# twitterSite = "@<your handle>"
-# twitterAuthor = "@<your handle>"
+twitterAuthor = "@rexarski"
+twitterSite = "@rexarski"
 
 # This disables Hugo's default syntax highlighting in favor
 # of prismjs. If you wish to use Hugo's default syntax highlighting
@@ -65,3 +64,20 @@ identifier = "blog"
 name = "blog"
 title = "Blog"
 url = "/blog"
+
+################################ Chinese Language ########################
+
+[Languages.cn]
+contentDir = "content/chinese"
+copyright = "© {year} 天王盖地虎"
+languageCode = "zh-cn"
+languageName = "中文"
+weight = 1
+
+################################ English Language ########################
+[Languages.en]
+contentDir = "content/english"
+copyright = "© {year} 小鸡炖蘑菇"
+languageCode = "en-us"
+languageName = "EN"
+weight = 2

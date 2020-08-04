@@ -3,10 +3,13 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos
 
 ### macOS ###
+node_modules
+
 # General
 .DS_Store
 .AppleDouble
 .LSOverride
+Thumbs.db
 
 # Icon must end with two \r
 Icon
@@ -30,5 +33,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# IDEs
+.vscode
+
+# Hugo
+public/
+
 # End of https://www.toptal.com/developers/gitignore/api/macos
-nnnn
+

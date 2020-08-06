@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+@import "overrides.scss";
+
+html,
+body {
+  font-family: Merriweather, Roboto Condensed, serif;
+  background-color: $dark;
+}
+
+.splash-container {
+
+  .splash {
+    h1 {
+      font-size: 2.5em;
+      font-weight: 600;
+      color: $tertiary;
+      font-family: Lato;
+    }
+
+    .handle {
+      font-size: 16px;
+      color: $fourth;
+      opacity: 0.75;
+      font-family: Roboto Condensed;
+    }
+
+    h2 {
+      font-size: 1.5em;
+      color: $secondary;
+    }
+  }
+}
+
+#about-container {
+  max-width: 34rem;
+  width: 100%;
+  padding-left: 50px;
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: Lato;
+  font-weight: Regular;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+#about {
+  padding-top: 4.5em;
+  padding-bottom: 3em;
+}
+
+.front-matter .hub {
+  font-family: Roboto Condensed, monospace, sans-serif;
+  font-size: 16px;
+  line-height: 30px;
+  margin-bottom: 0;
+  color: $primary;
+
+  .hub-list {
+    margin-top: 0;
+    display: inline-flex;
+    flex-direction: column;
+
+    a {
+      color: $primary;
+
+      &:hover {
+        color: $secondary;
+      }
+    }
+  }
+}
+
+.nav {
+  background-color: $dark;
+
+  .nav__list a {
+    color: $primary;
+    text-decoration: none;
+    font-size: 2em;
+
+    &.active {
+      color: $secondary;
+    }
+
+    &:hover {
+      color: $highlight;
+      font-size: 1.5em;
+    }
+
+    @media screen and (min-width: $medium) {
+      font-size: 1em;
+    }
+  }
+}
+
+.post-list {
+  .post__header time {
+    font-family: Roboto Condensed, monospace;
+    color: $fourth;
+  }
+
+  .post__title a {
+    color: $secondary;
+  }
+
+}
+
+.tag__link {
+  color: $primary;
+  background-color: $dark;
+}
+
+.tag__link::before {
+  content: "#";
+  color: $primary;
+}
+
+.tag__link:hover {
+  color: $highlight;
+  background-color: $dark;
+}
+
+.burger__container {
+  background-color: $darker;
+  box-shadow: 0 1px;
+
+  .burger__meat {
+    background-color: $tertiary;
+  }
+}
+
+#about-container {
+  color: $primary;
+
+  a {
+    color: $highlight;
+  }
+}
+
+.post__footer {
+  background-color: $dark;
+}
+
+.post {
+  h1 {
+    color: $secondary;
+  }
+
+  time {
+    color: $tertiary;
+  }
+
+}
+
+.post .post__content {
+
+  p {
+    color: $primary;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $secondary;
+  }
+
+  blockquote::before {
+    color: $tertiary;
+    opacity: 0.5;
+  }
+
+  blockquote {
+    p {
+      color: $tertiary;
+    }
+
+    cite {
+      color: $fourth;
+    }
+  }
+
+  table {
+
+
+    thead {
+      background-color: $darker;
+    }
+
+    th {
+      color: $tertiary;
+      // border: $fourth;
+      border-color: $darker;
+    }
+
+    td {
+      color: $tertiary;
+      border-color: $darker;
+    }
+  }
+
+  .language-html {
+    // box-shadow: 0 1px;
+    border-radius: 10px;
+  }
+
+  li {
+    color: $primary;
+  }
+
+  abbr {
+    color: $tertiary;
+  }
+
+  kbd {
+    // background-color: $tertiary;
+    color: $tertiary;
+    font-family: Roboto Condensed, monospace;
+  }
+
+  code {
+    background-color: $tertiary;
+    color: $darker;
+    font-family: Roboto Condensed, monospace;
+    border-radius: 3px;
+  }
+
+  pre {
+    background-color: $darker;
+
+    code {
+      background-color: $darker;
+      color: $tertiary;
+      font-family: Roboto Condensed, monospace;
+    }
+  }
+
+  .MathJax_SVG_Display {
+    color: $tertiary;
+  }
+
+  mark {
+    background-color: $highlight;
+    color: $dark;
+    border-radius: 3px;
+  }
+
+  hr {
+    color: $secondary;
+  }
+
+  a {
+    color: $highlight;
+  }
+
+  .tag__item {
+    tag__link::before {
+      background-color: $darker;
+    }
+  }
+
+  .twitter-tweet {
+    color: $tertiary;
+  }
+}
+
+#disqus_thread {
+  color: $highlight;
+}
+
+.dsq-brlink {
+  color: $highlight;
+}
+
+.post__footer p {
+  color: $secondary;
+}
+
+.pagination__item {
+
+  background-color: $dark;
+
+  .pagination__label {
+    color: $tertiary;
+  }
+
+  .pagination__title {
+    color: $secondary;
+  }
+}
+
+.pagination__item:hover {
+  background-color: $darker;
+}
+
+#TableOfContents a {
+  color: $darker;
+}
+
+#TableOfContents a.active {
+  color: $highlight;
+}
+
+// homepage css effect
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.fancy-title {
+  font-weight: 800px;
+
+  svg {
+    display: block;
+    font: 8.5em "Montserrat";
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .text-copy {
+    fill: none;
+    stroke: white;
+    stroke-dasharray: 6% 29%;
+    stroke-width: 5px;
+    stroke-dashoffset: 0%;
+    animation: stroke-offset 5.5s infinite linear;
+  }
+
+  .text-copy:nth-child(1) {
+    stroke: #4D163D;
+    animation-delay: -1;
+  }
+
+  .text-copy:nth-child(2) {
+    stroke: #840037;
+    animation-delay: -2s;
+  }
+
+  .text-copy:nth-child(3) {
+    stroke: #BD0034;
+    animation-delay: -3s;
+  }
+
+  .text-copy:nth-child(4) {
+    stroke: #BD0034;
+    animation-delay: -4s;
+  }
+
+  .text-copy:nth-child(5) {
+    stroke: #FDB731;
+    animation-delay: -5s;
+  }
+
+  @keyframes stroke-offset {
+    100% {
+      stroke-dashoffset: -35%;
+    }
+  }
+}

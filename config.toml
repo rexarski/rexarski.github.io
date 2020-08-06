@@ -1,22 +1,25 @@
 # DO NOT REMOVE THIS
 
+copyright = "© {year} Qiū Ruì"
 theme = "hugo-theme-codex"
+title = "qrui"
 
 # Override these settings with your own
-baseURL = "https://interetro.xyz/"
+baseURL = "/"
 languageCode = "en-us"
+
+# Only use this with i18n
 # DefaultContentLanguage = "en-us"
-title = "test field"
 
 # Add your Disqus shortname here.
 disqusShortname = "rexarski"
 
 # Add your Google Analytics identifier: UA-XXXXXXXX-X
-# googleAnalytics = "" 
+# googleAnalytics = ""
 
 # Optional params
 [params]
-# Follow the Hugo date/time format reference here: 
+# Follow the Hugo date/time format reference here:
 # https://gohugo.io/functions/format/#gos-layout-string
 dateFormat = "Jan 2 2006"
 
@@ -32,7 +35,7 @@ twitter = "https://twitter.com/rexarski"
 blog = "https://interetro.rbind.io"
 
 # Titles for your icons (shown as tooltips), and also their display order.
-# Currently, these icons are supported: 
+# Currently, these icons are supported:
 #   "Twitter", "GitHub", "Email", "Facebook", "GitLab", "Instagram", "LinkedIn", "YouTube"
 iconTitles = ["Twitter", "GitHub", "Email", "Blog"]
 
@@ -46,38 +49,55 @@ twitterSite = "@rexarski"
 # vendor script in layouts/blog/single.html.
 [markup]
 [markup.highlight]
-
 codeFences = false
+guessSyntax = false
+noClasses = true
+# style = "monokai" # somehow it cannot override the scss/partials/_github-syntax-highlight.scss
+tabWidth = 2
+
 # Set to false to disallow raw HTML in markdown files
+[markup.goldmark.extensions]
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
 [markup.goldmark.renderer]
 unsafe = true
 
 # Controls the navigation
-[[menu.main]]
-identifier = "about"
-name = "about"
-title = "About"
-url = "/"
-
+[menu]
 [[menu.main]]
 identifier = "blog"
 name = "blog"
-title = "Blog"
+title = "blog"
 url = "/blog"
-
-################################ Chinese Language ########################
-
-[Languages.cn]
-contentDir = "content/chinese"
-copyright = "© {year} 天王盖地虎"
-languageCode = "zh-cn"
-languageName = "中文"
 weight = 1
 
-################################ English Language ########################
-[Languages.en]
-contentDir = "content/english"
-copyright = "© {year} 小鸡炖蘑菇"
-languageCode = "en-us"
-languageName = "EN"
+[[menu.main]]
+identifier = "now"
+name = "now"
+title = "now"
+url = "/now"
 weight = 2
+
+[[menu.main]]
+identifier = "uses"
+name = "uses"
+title = "uses"
+url = "/uses"
+weight = 3
+
+[[menu.main]]
+identifier = "rss"
+name = "rss"
+title = "rss"
+url = "/index.xml"
+weight = 4
+
+[[menu.main]]
+identifier = "home"
+name = "home"
+title = "home"
+url = "/"
+weight = 5

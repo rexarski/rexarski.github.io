@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 @import "overrides.scss";
 
 html,
 body {
-  font-family: Merriweather, Roboto Condensed, serif;
+  font-family: Merriweather, Montserrat, Roboto Condensed, serif;
   background-color: $dark;
 }
 
@@ -17,7 +18,7 @@ body {
       font-size: 2.5em;
       font-weight: 600;
       color: $tertiary;
-      font-family: Lato;
+      font-family: Montserrat;
     }
 
     .handle {
@@ -40,7 +41,7 @@ body {
   padding-left: 50px;
   margin: 0 auto;
   font-size: 15px;
-  font-family: Lato;
+  font-family: Montserrat;
   font-weight: Regular;
   justify-content: flex-start;
   flex-direction: column;
@@ -136,6 +137,18 @@ body {
   color: $primary;
 
   a {
+    color: $highlight;
+  }
+}
+
+.post-list__container .tag__header {
+
+  a,
+  span {
+    color: $primary;
+  }
+
+  .tag__term {
     color: $highlight;
   }
 }
@@ -307,8 +320,6 @@ body {
 }
 
 // homepage css effect
-
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 .fancy-title {
   font-weight: 800px;

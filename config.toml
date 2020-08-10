@@ -89,15 +89,15 @@ url = "/uses"
 weight = 3
 
 [[menu.main]]
-identifier = "rss"
-name = "rss"
-title = "rss"
-url = "/index.xml"
-weight = 4
-
-[[menu.main]]
 identifier = "home"
 name = "home"
 title = "home"
 url = "/"
-weight = 5
+weight = 4
+
+# [[menu.main]]
+# identifier = "rss"
+# name = "rss"
+# title = "rss"
+# url = "/index.xml"
+# weight = 5

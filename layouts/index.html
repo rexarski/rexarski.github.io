@@ -6,32 +6,12 @@
 
 <div class="splash-container">
   <div class="splash">
-    <!-- <h1>{{ .Params.heading }}<span class="fancy">.xyz</span></h1> -->
-    <div class="fancy-title">
-      <svg viewBox="0 0 960 300">
-        <symbol id="s-text">
-          <text text-anchor="middle" x="50%" y="80%">interetro.xyz</text>
-        </symbol>
-
-        <g class="g-ants">
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-          <use xlink:href="#s-text" class="text-copy"></use>
-        </g>
-      </svg>
-    </div>
-    {{ if isset .Params "handle" }}
+    <h1>{{ .Params.heading }}<span class="fancy">.xyz</span></h1>
+    {{/*  {{ if isset .Params "handle" }}
     <span class="handle">@{{ .Params.handle }}</span>
-    {{ end }}
-    <h2>
-      {{ .Params.subheading }}
-    </h2>
-    <!-- Replace MEEEEE -->
-
+    {{ end }} */}}
+    {{/*  <h2>{{ .Params.subheading }}</h2> */}}
     <!-- {{ partial "social-icons.html" .}} -->
-
     {{ partial "hub.html" .}}
   </div>
 </div>

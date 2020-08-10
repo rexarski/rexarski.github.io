@@ -4,7 +4,7 @@ date: 2020-06-05
 slug: "markdown-syntax-guide"
 description: "Sample article showcasing basic Markdown syntax and formatting for HTML elements"
 keywords: ["gohugo", "hugo", "go", "blog"]
-draft: false
+draft: true
 tags: ["markdown", "css", "html", "themes"]
 math: false
 toc: false
@@ -51,18 +51,18 @@ The blockquote element represents content that is quoted from another source, op
 
 Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
 
-   Name | Age
---------|------
-    Bob | 27
-  Alice | 23
+   | Name  | Age |
+   | ----- | --- |
+   | Bob   | 27  |
+   | Alice | 23  |
 
 #### Inline Markdown within tables
 
 <div style="overflow-x: auto">
 
-| Inline&nbsp;&nbsp;&nbsp;     | Markdown&nbsp;&nbsp;&nbsp;  | In&nbsp;&nbsp;&nbsp;                | Table      |
-| ---------- | --------- | ----------------- | ---------- |
-| *italics*  | **bold**  | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code`     |
+| Inline&nbsp;&nbsp;&nbsp; | Markdown&nbsp;&nbsp;&nbsp; | In&nbsp;&nbsp;&nbsp;                | Table  |
+| ------------------------ | -------------------------- | ----------------------------------- | ------ |
+| *italics*                | **bold**                   | ~~strikethrough~~&nbsp;&nbsp;&nbsp; | `code` |
 
 </div>
 

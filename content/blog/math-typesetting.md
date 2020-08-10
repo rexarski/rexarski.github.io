@@ -4,7 +4,7 @@ date: 2020-06-05
 slug: "math-typesetting"
 description: "A brief guide to setup KaTeX"
 keywords: ["gohugo", "hugo", "go", "blog"]
-draft: false
+draft: true
 tags: ["math"]
 math: true
 toc: false
@@ -17,13 +17,13 @@ In this example we will be using [KaTeX](https://katex.org/)
 
 - Create a partial under `/layouts/partials/math.html`
 - Within this partial reference the [Auto-render Extension](https://katex.org/docs/autorender.html) or host these scripts locally.
-- Include the partial in your templates like so:  
+- Include the partial in your templates like so:
 
 ```
 {{ if or .Params.math .Site.Params.math }}
 {{ partial "math.html" . }}
 {{ end }}
-```  
+```
 - To enable KaTex globally set the parameter `math` to `true` in a project's configuration
 - To enable KaTex on a per page basis include the parameter `math: true` in content files.
 

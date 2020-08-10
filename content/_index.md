@@ -1,5 +1,5 @@
 ---
-heading: "interetro.xyz"
+heading: "interetro"
 subheading: "data viz tinkering"
 handle: "rexarski"
 ---

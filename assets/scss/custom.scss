@@ -7,13 +7,16 @@ body {
 }
 
 .splash-container {
-
   .splash {
     h1 {
       font-size: 2.5em;
       font-weight: 600;
-      color: $tertiary;
+      color: $primary;
       font-family: Futura;
+
+      span {
+        color: $tertiary;
+      }
     }
 
     .handle {
@@ -26,6 +29,7 @@ body {
     h2 {
       font-size: 1.5em;
       color: $secondary;
+      margin: 0;
     }
   }
 }
@@ -43,8 +47,12 @@ body {
 }
 
 #about {
-  padding-top: 4.5em;
-  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.about-text {
+  margin-top: 2em;
 }
 
 .front-matter .hub {
@@ -100,7 +108,6 @@ body {
   .post__title a {
     color: $secondary;
   }
-
 }
 
 .tag__link {
@@ -159,11 +166,9 @@ body {
   time {
     color: $tertiary;
   }
-
 }
 
 .post .post__content {
-
   p {
     color: $primary;
   }
@@ -193,8 +198,6 @@ body {
   }
 
   table {
-
-
     thead {
       background-color: $darker;
     }
@@ -289,7 +292,6 @@ body {
 }
 
 .pagination__item {
-
   background-color: $dark;
 
   .pagination__label {

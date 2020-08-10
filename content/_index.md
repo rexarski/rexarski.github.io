@@ -1,5 +1,6 @@
 ---
-heading: "interetro"
-subheading: "data viz tinkering"
+heading: "INTERETRO"
+heading2: ".xyz"
+subheading: "it's about data viz tinkering"
 handle: "rexarski"
 ---

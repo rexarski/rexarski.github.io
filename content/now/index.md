@@ -5,6 +5,8 @@ colorheading: "w"
 type: "page"
 ---
 
+Hi there! My name is Qiū Ruì.
+
 Currently:
 
 - living upside-down in Canberra, Australia.

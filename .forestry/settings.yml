@@ -4,15 +4,9 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: directory
-  path: layouts
-  label: layouts
-  create: all
-  match: "**/*"
 - type: document
   path: content/now/index.md
   label: now
-  match: "**/*"
 - type: document
   path: content/uses/index.md
   label: uses

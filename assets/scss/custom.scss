@@ -197,7 +197,7 @@ body {
     }
   }
 
-  table {
+  table:not(.js-file-line-container) {
     thead {
       background-color: $darker;
     }

@@ -8,34 +8,26 @@ layout: "page"
 ## Hardware
 
 - MacBook Pro 13-inch (2017)
-- iPad Pro 12.9 (2017) with Apple Pencil
-- iPhone XR
+- iPad Pro 12.9 (2017)
 - AirPods (2019)
-- Bose QC 25
 - Logitech MX Master 3
 - Keychron K2
-- Apple Watch Series 4
-- Nintendo Switch
 
 ## Software
 
-- iTerm 2
-- RStudio
-- Visual Studio Code
 - 1Password
 - Day One
 - DEVONthink 3
 - Drafts
-- Fantastical 3
-- Notion
-- Reeder
-- Texpad
-- Things
 - Due
-- Trello
+- Fantastical 3
 - Figma
-- Pocket Casts
-- Anki
+- iTerm 2
 - Obsidian
+- Pocket Casts
+- RStudio
+- Things
+- Trello
+- Visual Studio Code
 
-*This page was udpated on 2020-08-05.*
+_This page was udpated on 2020-08-29._

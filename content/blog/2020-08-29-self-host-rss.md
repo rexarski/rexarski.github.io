@@ -4,7 +4,7 @@ date: 2020-08-29T16:52:40+10:00
 slug: "self-host-rss"
 description: "Three steps to self-host miniflux and rsshub."
 keywords: ["rss", "miniflux", "rsshub", "self-host"]
-draft: draft
+draft: false
 tags: ["rss", "self-host"]
 math: false
 toc: true
@@ -22,8 +22,8 @@ So, three steps to unleash the true power of a personal RSS subscription service
 2. (Optional) Deploy RSSHub on that server.
 3. Deploy Miniflux on that server.
 
-
 ## Set Up A New Ubuntu Server
+
 I'm going to skip some introduction and simply paste the script here. Just follow Docker's [documentation](https://docs.docker.com/engine/install/) to install docker and docker-compose on Ubuntu.
 
 ```bash
@@ -96,7 +96,7 @@ vim docker-compose.yml
 Remember to keep a record of both pairs of usernames and passwords.
 
 ```yaml
-version: '3'
+version: "3"
 services:
   miniflux:
     image: miniflux/miniflux:latest

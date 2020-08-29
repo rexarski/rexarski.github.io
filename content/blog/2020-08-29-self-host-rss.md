@@ -10,6 +10,8 @@ math: false
 toc: true
 ---
 
+**Edit:** According to Miniflux's [documentation](https://miniflux.app/docs/services.html), refreshing feeds is not possible with Reeder since no user information is sent. This means, I can only fetch something new when the server side refreshes (by default, it's once an hour), no matter what syncing frequency I set in the application. That's definitely a bummer. But I will keep an eye on this. Maybe it will eventually become a turning point when I finally quit information overdosing.
+
 > Oceans rise, empires fall. RSS will be back.
 
 My subscription to Inoreader will expire soon. It's been a good year with it, but it was in fact less useful than I expected. From a retrospective point of view, the possibility to subscribe to more than 150 feeds might be the only feature that still seems attractive to me. But hey, why not more than 250, or 500? Although at the same time, I truly believe in the philosophy of "less is more" and "I probably won't have enough time for that".
@@ -125,3 +127,5 @@ docker-compose up -d miniflux
 ```
 
 So now I can access the Miniflux service by going to my ip address. Input the Miniflux username and password, then we are all good. In addition, I need to enable Fever api in Settings in order to read my feeds in other third party applications like [Reeder](https://reederapp.com/).
+
+Note: the "server" blank to fill in should be my ip/url + `/fever`.

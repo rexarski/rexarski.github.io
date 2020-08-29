@@ -4,6 +4,12 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: document
+  path: content/now/index.md
+  label: now
+- type: document
+  path: content/uses/index.md
+  label: uses
 - type: directory
   path: content
   label: Pages

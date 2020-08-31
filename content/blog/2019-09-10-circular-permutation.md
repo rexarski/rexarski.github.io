@@ -24,7 +24,7 @@ The number of ways to arrange $n$ distinct objects along a fixed (i.e., cannot b
 
 The reason why it is the factorial of $n-1$ instead of $n$ is all cycle rotation.
 
-<img class="special-img-class" style="width:100%" src="http://mathworld.wolfram.com/images/eps-gif/CircularPermutations_950.gif" />
+<img class="special-img-class" style="width:100%" src="https://mathworld.wolfram.com/images/eps-gif/CircularPermutations_950.gif" />
 
 If we consider a stricter definition, there will be only three free permutations (i.e., inequivalent when flipping the circle is allowed).
 

@@ -1,4 +1,15 @@
-# rexarski.github.io
-A new old friend.
+# README
 
-Made some modifications based on Jake Wiesler's [hugo-theme-codex](https://github.com/jakewies/hugo-theme-codex). A really inspirational piece of work.
+A new old friend. Currently using `interetro.xyz` as domain name.
+
+Made some modifications based on [Fuji](https://github.com/amzrk2/hugo-theme-fuji/).
+
+## TODO
+
+- [ ] check 404
+- [ ] [favicon](https://realfavicongenerator.net/)
+- [ ] add Google analytics, `googleAnalytics`
+- [ ] `description = "A minimal Hugo theme with nice theme color."`
+- [ ] `images = ["img/og.png"] # This will use the image called og.png in static/img folder`
+- [ ] GitHub script css fix in dark theme
+- [ ] syntax highlighting for more languages (?)

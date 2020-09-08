@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Food on @qrui - interetro.xyz</title>
+    <link>//localhost:1313/tags/food/</link>
+    <description>Recent content in Food on @qrui - interetro.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Apr 2020 00:08:01 +1000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/tags/food/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Air Avo is online!</title>
+      <link>//localhost:1313/post/2020-04-21-air-avo/</link>
+      <pubDate>Tue, 21 Apr 2020 00:08:01 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-04-21-air-avo/</guid>
+      <description>Inspired by Stefan’s blog post, I set up my own photo stream as well. It’s called Air Avo, a self-hosted photo scream based on a repo by Tim Van Damme.</description>
+    </item>
+    
+  </channel>
+</rss>

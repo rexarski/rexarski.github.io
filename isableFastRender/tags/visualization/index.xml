@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Visualization on @qrui - interetro.xyz</title>
+    <link>//localhost:1313/tags/visualization/</link>
+    <description>Recent content in Visualization on @qrui - interetro.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Sep 2020 01:28:35 +1000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/tags/visualization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Color Selection in Data Visualization</title>
+      <link>//localhost:1313/post/2020-09-08-beautifulcolors/</link>
+      <pubDate>Tue, 08 Sep 2020 01:28:35 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-09-08-beautifulcolors/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://blog.datawrapper.de/beautifulcolors/&#34; target=&#34;_blank&#34;&gt;How to pick more beautiful colors for your data visualizations&lt;/a&gt;&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Late to the party</title>
+      <link>//localhost:1313/post/2020-06-05-late-party/</link>
+      <pubDate>Fri, 05 Jun 2020 00:03:24 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-05-late-party/</guid>
+      <description>As a fellow redditor, I can naturally tell you what is trending on the /r/dataisbeautiful subreddit. Beautiful (or maybe not) charts come and go. One or two years back, there were ridge plots aka joy plots.</description>
+    </item>
+    
+    <item>
+      <title>Pokémon Recoloring</title>
+      <link>//localhost:1313/post/2019-04-17-pokemon-recoloring/</link>
+      <pubDate>Wed, 17 Apr 2019 23:32:22 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-04-17-pokemon-recoloring/</guid>
+      <description>Inspired by Alex Onsager and his wacky web app Pokemon Fusion, I was thinking about improving his approaches myself. In his post Pokemon Fusion: Behind the Scenes, he explains how he makes the head-swapping.</description>
+    </item>
+    
+    <item>
+      <title>Travel Time Polygon with osrm</title>
+      <link>//localhost:1313/post/2019-04-01-travel-time-polygon/</link>
+      <pubDate>Mon, 01 Apr 2019 23:26:51 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-04-01-travel-time-polygon/</guid>
+      <description>OpenStreetMap&amp;rsquo;s OSRM (Open Source Routing Machine) provides not only routing service, but a feature that enables drawing multiple routes to form a time-based polygon range as well. This is also called an isochrone.</description>
+    </item>
+    
+    <item>
+      <title>A Sneak Peek at Apple Watch Health Data</title>
+      <link>//localhost:1313/post/2018-11-26-apple-watch-health-data/</link>
+      <pubDate>Mon, 26 Nov 2018 23:17:51 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2018-11-26-apple-watch-health-data/</guid>
+      <description>I&amp;rsquo;ve always been wondering if Apple could utilize its collected health data in a more elegant way. The Activity app is decent, especially the achievements inside are definitely highlights in an iPhone x Apple Watch dynamic duo.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Hearthstone Pack Opening with Animation</title>
+      <link>//localhost:1313/post/2018-08-08-hearthstone/</link>
+      <pubDate>Wed, 08 Aug 2018 22:59:54 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2018-08-08-hearthstone/</guid>
+      <description>So today marks the release date of the latest Hearthstone expansion Dr. Boom&amp;rsquo;s Project The Boomsday Project. As usual, I&amp;rsquo;ve done some pack opening with my pal. But this time, I&amp;rsquo;ve also taken down some data and made a simple scatterplot (maybe?</description>
+    </item>
+    
+  </channel>
+</rss>

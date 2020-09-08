@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.74.3" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon-16x16.png" />
+<link rel="manifest" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/site.webmanifest" />
+<link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/safari-pinned-tab.svg" color="#8aa2d3" />
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
+<meta name="theme-color" content="#ffffff" />
+
+
+<title>From sentRy to Sentry - @qrui - interetro.xyz</title>
+
+
+<meta name="author" content="Qiū Ruì" />
+
+
+<meta name="description" content="A minimal Hugo theme with nice theme color." />
+
+
+<meta name="keywords" content="AWS, Telegram, R" />
+
+<meta property="og:title" content="From sentRy to Sentry" />
+<meta property="og:description" content="tl;dr
+
+
+Implemented an alerting (kinda hard to call it &ldquo;monitoring&rdquo;) system for Django with R Server and a Telegram bot." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/post/2020-02-14-sentry/" />
+<meta property="og:image" content="//localhost:1313/img/og.png"/>
+<meta property="article:published_time" content="2020-02-14T00:09:52+10:00" />
+<meta property="article:modified_time" content="2020-02-14T00:09:52+10:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="//localhost:1313/img/og.png"/>
+
+<meta name="twitter:title" content="From sentRy to Sentry"/>
+<meta name="twitter:description" content="tl;dr
+
+
+Implemented an alerting (kinda hard to call it &ldquo;monitoring&rdquo;) system for Django with R Server and a Telegram bot."/>
+
+
+
+
+<link rel="stylesheet" href="/assets/css/fuji.min.css" />
+
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="//localhost:1313/">@qrui - interetro.xyz</a>
+            
+            <span class="title-sub">Half data viz tinkering, half chaos.</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="//localhost:1313/post/2020-02-14-sentry/">From sentRy to Sentry</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2020-02-14</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;544 words</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/aws">AWS</a>&nbsp;<a href="/tags/telegram">Telegram</a>&nbsp;<a href="/tags/r">R</a>&nbsp;</span>
+
+    </div>
+    
+    
+    <div class="post-content markdown-body">
+        <h2 id="tldr">tl;dr</h2>
+<p><img class="img-zoomable" src="/image/sentry-map.png" alt="img" />
+</p>
+<p>Implemented an alerting (kinda hard to call it &ldquo;monitoring&rdquo;) system for Django with R Server and a Telegram bot.</p>
+<p>A typical instance of its report is like this:</p>
+<blockquote>
+<p>Some errors occurred in the last 15 minutes on the server, a copy of log will be processed by sentRy. It will identify those new errors which have not been reported yet and save them to local storage. Meanwhile, the incremental part will be parsed to a telegram bot, sending error summaries and a recent 12-hour bar chart to a channel. At the same time, an updated copy of notifications (of course, errors) will be synced to Shinyapps.io and the Shiny app should have the latest info displayed.</p>
+</blockquote>
+<p><img class="img-zoomable" src="/image/sentry-bot.png" alt="img" />
+</p>
+<p>It was designed to fulfill a particular job and I guess it got things done to some extent. But recently, our dev team deployed a fully functional monitoring system called <a href="https://sentry.io/welcome/" target="_blank">Sentry</a>. I mean, what a coincidence. I had no idea about this and only named it after the sentry gun in Team Fortress 2.</p>
+<h2 id="dependencies">Dependencies</h2>
+<ul>
+<li><code>tidyverse</code></li>
+<li><code>telegram.bot</code></li>
+<li><code>cronR</code></li>
+<li><code>shinyFiles</code></li>
+<li><code>aws.s3</code></li>
+</ul>
+<h2 id="how-to-use-it-anyway">How to use it (anyway)?</h2>
+<ol>
+<li>In Telegram, create a new bot under the permission of @BotFather. Follow the order and make sure you have a valid API Token.</li>
+<li>You can test the basic message functionality with <code>bot_script.r</code>. But it won&rsquo;t be needed in the main script.</li>
+<li>You can also test run the actual process with <code>log_process.r</code>.</li>
+<li>If there are problems no more, click <code>Addin</code> in RStudio and select &ldquo;<em>Schedule R scripts on Linux/Unix</em>&rdquo;.</li>
+</ol>
+<p><img class="img-zoomable" src="/image/sentry-cronR.png" alt="img" />
+</p>
+<h2 id="related-files">Related files</h2>
+<ul>
+<li><code>bot_script.r</code> The script for testing Telegram bot creation. Will be dropped later.</li>
+<li><code>dashboard</code> A shiny app displaying all the errors.</li>
+<li><code>error.log</code> An error log copied from Django.</li>
+<li><code>global.r</code> The script dedicated to setting up S3 connection.</li>
+<li><code>log_process.r</code> The main script which needs to run periodically.</li>
+<li><code>notification.csv</code> The formatted backup of errors captured by this monitoring script. It is de facto very similar to <code>error.log</code>.</li>
+<li><code>settings.csv</code> A file to save some setting parameters including the latest reported error time.</li>
+<li><code>log_process.log</code> The R console log for running <code>log_process.r</code>. Potentially useful when debugging.</li>
+</ul>
+<h2 id="issues">Issues</h2>
+<ol>
+<li>
+<p>Even the files published to shinyapps.io do not involve any unchecked files (when publishing), they will be verified any ways, thus leading to some filename and path related error returning. A better idea is to create a separate folder and zip it before uploading. Since I claimed all the paths absolute in my code due to the limitation of <code>cronR</code>, I have to <code>scp</code> another copy to the directory of shiny after writing to <code>notification</code>.</p>
+</li>
+<li>
+<p>You can always refer to the &ldquo;Log&rdquo; tab in shiny app to debug. Really helpful.</p>
+</li>
+<li>
+<p>Very hard to read a csv file without any column names in S3 bucket. The function <code>aws.s3::s3read_using(FUN, ..., object, bucket, opts = NULL)</code> is problematic, as <code>FUN</code> cannot insert any extra parameters. It is a shame that <code>readr::read_delim</code> cannot be used as well. At last a blog post on <a href="https://medium.com/ibm-data-science-experience/read-and-write-data-to-and-from-amazon-s3-buckets-in-rstudio-1a0f29c44fa7" target="_blank">Medium</a> saved my life.</p>
+</li>
+<li>
+<p>Something weird happens when <code>meta1</code> and <code>meta2</code> extracted have different length. Specifically,
+<code>meta1</code> with “<code>ERROR|WARNING|CRITICAL</code>” has fewer than the number of rows. That is to say, some lines are not starting with “<code>ERROR…</code>” Turns out my regex should start with a <code>^</code> otherwise things like <code>&quot; self._log(ERROR, msg, args, **kwargs)”</code> could be matched as well. In short,</p>
+</li>
+</ol>
+<pre><code>^
+</code></pre>
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>Unless otherwise noted, the content of this site is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a>.</p>
+    </blockquote>
+</div>
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;Load comments
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = '\/\/localhost:1313\/post\/2020-02-14-sentry\/';
+                this.page.identifier = '2020-02-14-sentry';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'rexarski' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/now/">Now</a>
+            </li>
+            
+            <li>
+                <a href="/uses/">Uses</a>
+            </li>
+            
+            <li>
+                <a href="/archives/">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/algorithm/">Algorithm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/aws/">AWS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cleaning/">Cleaning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/conda/">conda</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ec2/">EC2</a>
+            </span>
+            
+            <span>
+                <a href="/tags/food/">Food</a>
+            </span>
+            
+            <span>
+                <a href="/tags/generative/">Generative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ggplot2/">ggplot2</a>
+            </span>
+            
+            <span>
+                <a href="/tags/graph-theory/">Graph Theory</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ios/">iOS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k-means/">k-means</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">Linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/macos/">macOS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/maths/">Maths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">MySQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/productivity/">Productivity</a>
+            </span>
+            
+            <span>
+                <a href="/tags/r/">R</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rmarkdown/">Rmarkdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rss/">RSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rstudio/">RStudio</a>
+            </span>
+            
+            <span>
+                <a href="/tags/scraping/">Scraping</a>
+            </span>
+            
+            <span>
+                <a href="/tags/self-host/">Self-host</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shortcut/">Shortcut</a>
+            </span>
+            
+            <span>
+                <a href="/tags/telegram/">Telegram</a>
+            </span>
+            
+            <span>
+                <a href="/tags/visualization/">Visualization</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/rexarski" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="https://twitter.com/rexarski" target="_blank"><span>Twitter</span></a>
+            </li>
+            
+            <li>
+                <a href="https://airavo.netlify.app" target="_blank"><span>Gallery</span></a>
+            </li>
+            
+            <li>
+                <a href="https://keybase.io/rexarski/chat" target="_blank"><span>Keybase</span></a>
+            </li>
+            
+            <li>
+                <a href="https://t.me/itsnopie" target="_blank"><span>Telegram</span></a>
+            </li>
+            
+            <li>
+                <a href="https://pinboard.in/u:rexarski" target="_blank"><span>Pinboard</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>TOC</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tldr">tl;dr</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#how-to-use-it-anyway">How to use it (anyway)?</a></li>
+    <li><a href="#related-files">Related files</a></li>
+    <li><a href="#issues">Issues</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            <span>&copy; 2020 <a href="//localhost:1313/">Qiū Ruì</a> |
+                Powered by <a href="https://github.com/amzrk2/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
+                   target="_blank">Hugo</a> </span>
+        </div>
+    </div>
+</footer>
+    
+<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

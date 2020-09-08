@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Shortcut on @qrui - interetro.xyz</title>
+    <link>//localhost:1313/tags/shortcut/</link>
+    <description>Recent content in Shortcut on @qrui - interetro.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 14 Jun 2020 23:45:37 +1000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/tags/shortcut/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>COVID confirmed cases Shortcut</title>
+      <link>//localhost:1313/post/2020-06-14-covid-shortcut/</link>
+      <pubDate>Sun, 14 Jun 2020 23:45:37 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-14-covid-shortcut/</guid>
+      <description>This post is a subsequent blog to my daily experience basically in the last two months. As the general situation of the COVID-19 pandemic in Australian Capital Territory keeps is keeping stable, sometimes I almost forget to check on this Shortcut.</description>
+    </item>
+    
+  </channel>
+</rss>

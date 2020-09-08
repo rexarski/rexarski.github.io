@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.74.3" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon-16x16.png" />
+<link rel="manifest" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/site.webmanifest" />
+<link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/safari-pinned-tab.svg" color="#8aa2d3" />
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
+<meta name="theme-color" content="#ffffff" />
+
+
+<title>Writing R codes on an iPad Pro - @qrui - interetro.xyz</title>
+
+
+<meta name="author" content="Qiū Ruì" />
+
+
+<meta name="description" content="A minimal Hugo theme with nice theme color." />
+
+
+<meta name="keywords" content="R, iOS, RStudio" />
+
+<meta property="og:title" content="Writing R codes on an iPad Pro" />
+<meta property="og:description" content="Two weeks ago I sent my 2017 model of MacBook Pro to our local Genius Bar to replace the keyboard and the battery. During this one week span of absence, I moved to my iPad Pro to finish the Australian universities&rsquo; course information scraping." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/post/2019-11-25-r-on-ipad/" />
+<meta property="og:image" content="//localhost:1313/img/og.png"/>
+<meta property="article:published_time" content="2019-11-25T00:20:57+10:00" />
+<meta property="article:modified_time" content="2019-11-25T00:20:57+10:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="//localhost:1313/img/og.png"/>
+
+<meta name="twitter:title" content="Writing R codes on an iPad Pro"/>
+<meta name="twitter:description" content="Two weeks ago I sent my 2017 model of MacBook Pro to our local Genius Bar to replace the keyboard and the battery. During this one week span of absence, I moved to my iPad Pro to finish the Australian universities&rsquo; course information scraping."/>
+
+
+
+
+<link rel="stylesheet" href="/assets/css/fuji.min.css" />
+
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="//localhost:1313/">@qrui - interetro.xyz</a>
+            
+            <span class="title-sub">Half data viz tinkering, half chaos.</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="//localhost:1313/post/2019-11-25-r-on-ipad/">Writing R codes on an iPad Pro</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2019-11-25</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;557 words</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/r">R</a>&nbsp;<a href="/tags/ios">iOS</a>&nbsp;<a href="/tags/rstudio">RStudio</a>&nbsp;</span>
+
+    </div>
+    
+    
+    <div class="post-content markdown-body">
+        <p>Two weeks ago I sent my 2017 model of MacBook Pro to our local Genius Bar to replace the keyboard and the battery. During this one week span of absence, I moved to my iPad Pro to finish the Australian universities&rsquo; course information <a href="https://github.com/rexarski/aussie" target="_blank">scraping</a>.</p>
+<h2 id="setup">Setup</h2>
+<p>Initially I tried to deploy an server version of RStudio on my Ubuntu 19.04 server. But constant errors occured during the installation. After downgrading from 19.04 to 18.04. the installation went on smoothly.</p>
+<p>In addtion, I installed <code>zsh</code> and <code>oh-my-zsh</code> as life-savers. (<a href="https://www.freecodecamp.org/news/jazz-up-your-zsh-terminal-in-seven-steps-a-visual-guide-e81a8fd59a38/" target="_blank">Guide</a>)</p>
+<p>Install R and <a href="https://rstudio.com/products/rstudio/download-server/debian-ubuntu/" target="_blank">RStudio server</a>.</p>
+<h2 id="start">Start</h2>
+<p>RStudio Server will not permit logins by system users (those with user ids lower than 100).</p>
+<p>So we need to <a href="https://www.cyberciti.biz/faq/create-a-user-account-on-ubuntu-linux/" target="_blank">create</a> a &ldquo;normal&rdquo; user.</p>
+<p><img class="img-zoomable" src="https://imgur.com/xixSL4G.png" alt="img" />
+</p>
+<pre><code class="language-bash">$ sudo adduser rexarski // password==xingzilovexuanzi
+
+$ cat /etc/passwd($ grep '^rexarski' /etc/passwd
+</code></pre>
+<p><img class="img-zoomable" src="https://imgur.com/DVfqbU4.png" alt="img" />
+</p>
+<h2 id="unable-to-install-r-packages-on-linux">Unable to install R packages on Linux</h2>
+<ul>
+<li>Update and upgrade <code>sudo apt updates</code> and <code>sudo apt upgrade</code></li>
+<li><code>sudo apt autoremove curl</code> and <code>sudo apt install curl</code> <strong>no effect</strong></li>
+</ul>
+<pre><code>------------------------- ANTICONF ERROR ---------------------------
+Configuration failed because libcurl was not found. Try installing:
+ * deb: libcurl4-openssl-dev (Debian, Ubuntu, etc)
+ * rpm: libcurl-devel (Fedora, CentOS, RHEL)
+ * csw: libcurl_dev (Solaris)
+If libcurl is already installed, check that 'pkg-config' is in your
+PATH and PKG_CONFIG_PATH contains a libcurl.pc file. If pkg-config
+is unavailable you can set INCLUDE_DIR and LIB_DIR manually via:
+R CMD INSTALL --configure-vars='INCLUDE_DIR=... LIB_DIR=...'
+--------------------------------------------------------------------
+ERROR: configuration failed for package ‘curl’
+</code></pre>
+<ul>
+<li>Do these on root (who knows&hellip;)
+<a href="https://askubuntu.com/questions/1057455/some-r-packages-wont-install">https://askubuntu.com/questions/1057455/some-r-packages-wont-install</a></li>
+</ul>
+<pre><code class="language-bash">$ sudo apt-get install libcurl4-dev
+$ sudo apt-get install r-base-dev
+$ sudo apt-get install libssl-dev
+$ sudo apt-get install libxml2-dev
+</code></pre>
+<ul>
+<li>Then use a normal account (non-root) to install R packages.</li>
+</ul>
+<pre><code class="language-r">install.packages(“tidyverse”, “rvest”, “pacman”)
+# verify
+library(tidyverse)
+</code></pre>
+<h2 id="tidy-problem">Tidy problem</h2>
+<ul>
+<li>Takes forever to install <code>tidyverse</code> though. Also, <code>pacman</code> is not available for 3.4.4</li>
+<li>Some packages are easy to install, but some takes forever like <code>dplyr</code> <code>tidyr</code> etc.</li>
+<li>Even loading an installed package <code>dplyr</code> is problematic:</li>
+</ul>
+<pre><code>Error: package or namespace load failed for ‘dplyr’ in library.dynam(lib, package, package.lib):
+ shared object ‘dplyr.so’ not found
+In addition: Warning message:
+S3 methods ‘[.fun_list’, ‘[.grouped_df’, ‘all.equal.tbl_df’, ‘anti_join.data.frame’, ‘anti_join.tbl_df’, ‘arrange.data.frame’, ‘arrange.default’, ‘arrange.grouped_df’, ‘arrange.tbl_df’, ‘arrange_.data.frame’, ‘arrange_.tbl_df’, ‘as.data.frame.grouped_df’, ‘as.data.frame.rowwise_df’, ‘as.data.frame.tbl_cube’, ‘as.table.tbl_cube’, ‘as.tbl.data.frame’, ‘as.tbl.tbl’, ‘as.tbl_cube.array’, ‘as.tbl_cube.data.frame’, ‘as.tbl_cube.matrix’, ‘as.tbl_cube.table’, ‘as_tibble.grouped_df’, ‘as_tibble.tbl_cube’, ‘auto_copy.tbl_cube’, ‘auto_copy.tbl_df’, ‘cbind.grouped_df’, ‘collapse.data.frame’, ‘collect.data.frame’, ‘common_by.NULL’, ‘common_by.character’, ‘common_by.default’, ‘common_by.list’, ‘compute.data.frame’, ‘copy_to.DBIConnection’, ‘copy_to.src_local’, ‘default_missing.data.frame’, ‘default_missing.default’, ‘dim.tbl_cube’, ‘distinct.data.f [... truncated]
+</code></pre>
+<p>Turns out, while installing <code>readr</code> i found there is not enough virtual memory. See this github issue: <a href="https://github.com/tidyverse/readr/issues/544" target="_blank">CRAN version of readr crashes the compiler on small-RAM Ubuntu 16.04 system</a>. The Vultr server I was using is a $5 per month 1GB RAM little kicker, so this pretty much explains everything.</p>
+<p>Thanks to this <a href="https://stackoverflow.com/questions/40945512/r-ubuntu-cant-install-packages-readr-and-eurostat" target="_blank">post</a>. I call this “black magic”. You can actually <em>install a prebuilt binary so that you do not have to compile the package from the source</em>.</p>
+<pre><code class="language-bash">$ apt-get update
+$ apt-get install software-properties-common
+$ add-apt-repository -y “ppa:marutter/rrutter”
+$ add-apt-repository -y “ppa:marutter/c2d4u”
+$ apt-get update
+$ apt-get install r-cran-readr
+</code></pre>
+<p>Worked for me this time. But for packages like <code>dplyr</code> which were installed previously but could not be loaded on my end, I tried to <code>remove.packages()</code> them first, then installed the prebuilt version. The binary this time would not save the day because it is outdated and could not support the minimum requirement of <code>rlang</code>.</p>
+<p>But anyways, this whole process at least suffices to power me through scraping a few bunch of universities courses already.</p>
+<p>I am officially missing my lil buddy MacBook.</p>
+
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>Unless otherwise noted, the content of this site is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a>.</p>
+    </blockquote>
+</div>
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;Load comments
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = '\/\/localhost:1313\/post\/2019-11-25-r-on-ipad\/';
+                this.page.identifier = '2019-11-25-r-on-ipad';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'rexarski' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/now/">Now</a>
+            </li>
+            
+            <li>
+                <a href="/uses/">Uses</a>
+            </li>
+            
+            <li>
+                <a href="/archives/">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/algorithm/">Algorithm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/aws/">AWS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cleaning/">Cleaning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/conda/">conda</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ec2/">EC2</a>
+            </span>
+            
+            <span>
+                <a href="/tags/food/">Food</a>
+            </span>
+            
+            <span>
+                <a href="/tags/generative/">Generative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ggplot2/">ggplot2</a>
+            </span>
+            
+            <span>
+                <a href="/tags/graph-theory/">Graph Theory</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ios/">iOS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k-means/">k-means</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">Linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/macos/">macOS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/maths/">Maths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">MySQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/productivity/">Productivity</a>
+            </span>
+            
+            <span>
+                <a href="/tags/r/">R</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rmarkdown/">Rmarkdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rss/">RSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rstudio/">RStudio</a>
+            </span>
+            
+            <span>
+                <a href="/tags/scraping/">Scraping</a>
+            </span>
+            
+            <span>
+                <a href="/tags/self-host/">Self-host</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shortcut/">Shortcut</a>
+            </span>
+            
+            <span>
+                <a href="/tags/telegram/">Telegram</a>
+            </span>
+            
+            <span>
+                <a href="/tags/visualization/">Visualization</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/rexarski" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="https://twitter.com/rexarski" target="_blank"><span>Twitter</span></a>
+            </li>
+            
+            <li>
+                <a href="https://airavo.netlify.app" target="_blank"><span>Gallery</span></a>
+            </li>
+            
+            <li>
+                <a href="https://keybase.io/rexarski/chat" target="_blank"><span>Keybase</span></a>
+            </li>
+            
+            <li>
+                <a href="https://t.me/itsnopie" target="_blank"><span>Telegram</span></a>
+            </li>
+            
+            <li>
+                <a href="https://pinboard.in/u:rexarski" target="_blank"><span>Pinboard</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    <div class="sidebar-item sidebar-toc">
+        <h3>TOC</h3>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#setup">Setup</a></li>
+    <li><a href="#start">Start</a></li>
+    <li><a href="#unable-to-install-r-packages-on-linux">Unable to install R packages on Linux</a></li>
+    <li><a href="#tidy-problem">Tidy problem</a></li>
+  </ul>
+</nav>
+    </div>
+    
+    
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            <span>&copy; 2020 <a href="//localhost:1313/">Qiū Ruì</a> |
+                Powered by <a href="https://github.com/amzrk2/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
+                   target="_blank">Hugo</a> </span>
+        </div>
+    </div>
+</footer>
+    
+<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

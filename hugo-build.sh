@@ -1,3 +1,3 @@
 rm -rf public
 hugo --verbose
-hugo server --gc --verbose --watch
+# hugo server --gc --verbose --watch

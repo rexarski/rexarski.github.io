@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Productivity on @qrui - interetro.xyz</title>
+    <link>//localhost:1313/tags/productivity/</link>
+    <description>Recent content in Productivity on @qrui - interetro.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 13 Jun 2020 23:48:56 +1000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/tags/productivity/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>99 days of Decluttering</title>
+      <link>//localhost:1313/post/2020-06-13-decluttering/</link>
+      <pubDate>Sat, 13 Jun 2020 23:48:56 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-13-decluttering/</guid>
+      <description>&lt;p&gt;99 days ago, at some moment on that day, I told myself “hey bro, it’s time to kiss goodbye to those old residents crawling in your read-it-later-but-never-know-when-ish reading list and something like that”.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DEVONthink 备份清扫</title>
+      <link>//localhost:1313/post/2020-06-09-devonthink-backup-cleanup/</link>
+      <pubDate>Tue, 09 Jun 2020 22:40:29 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-09-devonthink-backup-cleanup/</guid>
+      <description>&lt;p&gt;Devon 本意是英国的德文郡，由于此地的地层最早被研究，便用 Devonian 称呼在此处发现的特地地层。尔后翻译为中文便唤做「泥盆纪」。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta name="HandheldFriendly" content="True" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="generator" content="Hugo 0.74.3" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon-16x16.png" />
+<link rel="manifest" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/site.webmanifest" />
+<link rel="mask-icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/safari-pinned-tab.svg" color="#8aa2d3" />
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/amzrk2/cdn-stcapi@1/favicons/favicon.ico" />
+<meta name="theme-color" content="#ffffff" />
+
+
+<title>Basic Web Scraping with rvest - @qrui - interetro.xyz</title>
+
+
+<meta name="author" content="Qiū Ruì" />
+
+
+<meta name="description" content="A minimal Hugo theme with nice theme color." />
+
+
+<meta name="keywords" content="Scraping, R" />
+
+<meta property="og:title" content="Basic Web Scraping with rvest" />
+<meta property="og:description" content="The post here demonstrates an example of Hacker News scraper with rvest library.
+But a tiny problem emerges as sometimes YC-funded startup post job ads on the front page so that the scraper would find different information vector with different lengths." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="//localhost:1313/post/2018-06-26-basic-web-scraping-with-rvest/" />
+<meta property="og:image" content="//localhost:1313/img/og.png"/>
+<meta property="article:published_time" content="2018-06-26T22:51:44+10:00" />
+<meta property="article:modified_time" content="2018-06-26T22:51:44+10:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="//localhost:1313/img/og.png"/>
+
+<meta name="twitter:title" content="Basic Web Scraping with rvest"/>
+<meta name="twitter:description" content="The post here demonstrates an example of Hacker News scraper with rvest library.
+But a tiny problem emerges as sometimes YC-funded startup post job ads on the front page so that the scraper would find different information vector with different lengths."/>
+
+
+
+
+<link rel="stylesheet" href="/assets/css/fuji.min.css" />
+
+
+
+
+
+
+</head>
+
+<body data-theme="auto">
+    <script data-cfasync="false">
+  
+  var fujiThemeData = localStorage.getItem('fuji_data-theme');
+  
+  if (!fujiThemeData) {
+    localStorage.setItem('fuji_data-theme', 'auto');
+  } else {
+    
+    if (fujiThemeData !== 'auto') {
+      document.body.setAttribute('data-theme', fujiThemeData === 'dark' ? 'dark' : 'light');
+    }
+  }
+</script>
+
+    <header>
+    <div class="container-lg clearfix">
+        <div class="col-12 header">
+            <a class="title-main" href="//localhost:1313/">@qrui - interetro.xyz</a>
+            
+            <span class="title-sub">Half data viz tinkering, half chaos.</span>
+            
+        </div>
+    </div>
+</header>
+
+    <main>
+        <div class="container-lg clearfix">
+            
+            <div class="col-12 col-md-9 float-left content">
+                
+<article>
+    
+    <h2 class="post-item post-title">
+        <a href="//localhost:1313/post/2018-06-26-basic-web-scraping-with-rvest/">Basic Web Scraping with rvest</a>
+    </h2>
+    <div class="post-item post-meta">
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;2018-06-26</span><span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;154 words</span><span><i class="iconfont icon-pricetags-sharp"></i>&nbsp;<a href="/tags/scraping">Scraping</a>&nbsp;<a href="/tags/r">R</a>&nbsp;</span>
+
+    </div>
+    
+    
+    <div class="post-content markdown-body">
+        <p>The <a href="https://datascienceplus.com/building-a-hacker-news-scraper-with-8-lines-of-r-code-using-rvest-library/" target="_blank">post</a> here demonstrates an example of Hacker News scraper with <code>rvest</code> library.</p>
+<p>But a tiny problem emerges as sometimes YC-funded startup post job ads on the front page so that the scraper would find different information vector with different lengths. Specifically, the it would not return any score value for that ad. One possible remedy is to log in as a real user, then do the scraping. In R, it is implemented as:</p>
+<pre><code class="language-r">library(rvest)
+
+login &lt;- 'https://news.ycombinator.com/login'
+session &lt;- html_session(login)
+form &lt;- html_form(session)[[1]]
+filled_form &lt;- set_values(form, acct='MyAccountName', pw='MyPassword')
+submit_form(session, filled_form)
+content &lt;- jump_to(session, 'https://news.ycombinator.com/')
+
+title &lt;- content %&gt;%
+    html_nodes('a.storylink') %&gt;% html_text()
+link_domain &lt;- content %&gt;%
+    html_nodes('span.sitestr') %&gt;% html_text()
+score &lt;- content %&gt;%
+    html_nodes('span.score') %&gt;% html_text()
+age &lt;- content %&gt;%
+    html_nodes('span.age') %&gt;% html_text()
+df &lt;- data.frame(title = title, link_domain = link_domain, score = score, age = age)
+</code></pre>
+<p>The saved data frame would contain all the 30 links on the front page of Hacker News.</p>
+
+    </div>
+</article>
+
+
+<div class="license markdown-body">
+    <blockquote>
+        <p>Unless otherwise noted, the content of this site is licensed under <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+               target="_blank">CC BY-NC-SA 4.0</a>.</p>
+    </blockquote>
+</div>
+
+
+<div class="post-comment" data-comment="disqus">
+    <span class="post-comment-notloaded">
+        <i class="iconfont icon-chatbox-ellipses-sharp"></i>&nbsp;Load comments
+    </span>
+    <div id="disqus_thread" style="display: none;"></div>
+    <script>
+        function loadComment() {
+            var commentArea = document.querySelector('.post-comment');
+            var disqus_config = function () {
+                this.page.url = '\/\/localhost:1313\/post\/2018-06-26-basic-web-scraping-with-rvest\/';
+                this.page.identifier = '2018-06-26-basic-web-scraping-with-rvest';
+            };
+            var s = document.createElement('script');
+            s.src = 'https://' + 'rexarski' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            document.querySelector('#disqus_thread').removeAttribute('style');
+            (document.body || document.head).appendChild(s);
+            document.querySelector('span.post-comment-notloaded').setAttribute('style', 'display: none;');
+        }
+    </script>
+</div>
+
+
+            </div>
+            <aside class="col-12 col-md-3 float-left sidebar">
+    
+    <div class="sidebar-item sidebar-pages">
+        <h3>Pages</h3>
+        <ul>
+            
+            <li>
+                <a href="/">Home</a>
+            </li>
+            
+            <li>
+                <a href="/now/">Now</a>
+            </li>
+            
+            <li>
+                <a href="/uses/">Uses</a>
+            </li>
+            
+            <li>
+                <a href="/archives/">Archives</a>
+            </li>
+            
+            <li>
+                <a href="/search/">Search</a>
+            </li>
+            
+            <li>
+                <a href="/index.xml">RSS</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    <div class="sidebar-item sidebar-tags">
+        <h3>Tags</h3>
+        <div>
+            
+            <span>
+                <a href="/tags/algorithm/">Algorithm</a>
+            </span>
+            
+            <span>
+                <a href="/tags/aws/">AWS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/cleaning/">Cleaning</a>
+            </span>
+            
+            <span>
+                <a href="/tags/conda/">conda</a>
+            </span>
+            
+            <span>
+                <a href="/tags/design/">Design</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ec2/">EC2</a>
+            </span>
+            
+            <span>
+                <a href="/tags/food/">Food</a>
+            </span>
+            
+            <span>
+                <a href="/tags/generative/">Generative</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ggplot2/">ggplot2</a>
+            </span>
+            
+            <span>
+                <a href="/tags/graph-theory/">Graph Theory</a>
+            </span>
+            
+            <span>
+                <a href="/tags/ios/">iOS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/k-means/">k-means</a>
+            </span>
+            
+            <span>
+                <a href="/tags/linux/">Linux</a>
+            </span>
+            
+            <span>
+                <a href="/tags/macos/">macOS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/maths/">Maths</a>
+            </span>
+            
+            <span>
+                <a href="/tags/mysql/">MySQL</a>
+            </span>
+            
+            <span>
+                <a href="/tags/productivity/">Productivity</a>
+            </span>
+            
+            <span>
+                <a href="/tags/r/">R</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rmarkdown/">Rmarkdown</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rss/">RSS</a>
+            </span>
+            
+            <span>
+                <a href="/tags/rstudio/">RStudio</a>
+            </span>
+            
+            <span>
+                <a href="/tags/scraping/">Scraping</a>
+            </span>
+            
+            <span>
+                <a href="/tags/self-host/">Self-host</a>
+            </span>
+            
+            <span>
+                <a href="/tags/shortcut/">Shortcut</a>
+            </span>
+            
+            <span>
+                <a href="/tags/telegram/">Telegram</a>
+            </span>
+            
+            <span>
+                <a href="/tags/visualization/">Visualization</a>
+            </span>
+            
+        </div>
+    </div>
+    
+    <div class="sidebar-item sidebar-links">
+        <h3>Links</h3>
+        <ul>
+            
+            <li>
+                <a href="https://github.com/rexarski" target="_blank"><span>GitHub</span></a>
+            </li>
+            
+            <li>
+                <a href="https://twitter.com/rexarski" target="_blank"><span>Twitter</span></a>
+            </li>
+            
+            <li>
+                <a href="https://airavo.netlify.app" target="_blank"><span>Gallery</span></a>
+            </li>
+            
+            <li>
+                <a href="https://keybase.io/rexarski/chat" target="_blank"><span>Keybase</span></a>
+            </li>
+            
+            <li>
+                <a href="https://t.me/itsnopie" target="_blank"><span>Telegram</span></a>
+            </li>
+            
+            <li>
+                <a href="https://pinboard.in/u:rexarski" target="_blank"><span>Pinboard</span></a>
+            </li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+</aside>
+        </div>
+        <div class="btn">
+    <div class="btn-toggle-mode">
+        <i class="iconfont icon-contrast-sharp"></i>
+    </div>
+    <div class="btn-scroll-top">
+        <i class="iconfont icon-chevron-up-circle-sharp"></i>
+    </div>
+</div>
+    </main>
+
+    <footer>
+    <div class="container-lg clearfix">
+        <div class="col-12 footer">
+            <span>&copy; 2020 <a href="//localhost:1313/">Qiū Ruì</a> |
+                Powered by <a href="https://github.com/amzrk2/hugo-theme-fuji/"
+                   target="_blank">Fuji-v2</a> & <a href="https://gohugo.io/"
+                   target="_blank">Hugo</a> </span>
+        </div>
+    </div>
+</footer>
+    
+<script defer src="https://cdn.jsdelivr.net/combine/npm/medium-zoom@1.0.5,npm/lazysizes@5.2.2"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/components/prism-core.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script defer src="/assets/js/fuji.min.js"></script>
+
+
+</body>
+
+</html>

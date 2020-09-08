@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>@qrui - interetro.xyz</title>
+    <link>//localhost:1313/</link>
+    <description>Recent content on @qrui - interetro.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 08 Sep 2020 01:28:35 +1000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Now</title>
+      <link>//localhost:1313/now/</link>
+      <pubDate>Tue, 08 Sep 2020 00:18:32 +0800</pubDate>
+      
+      <guid>//localhost:1313/now/</guid>
+      <description>Hi there! My name is Qiū Ruì.
+Currently:
+ living upside-down in Canberra, Australia. working at a local start-up as a product manager. been working from home since early 2020 due to the great fire.</description>
+    </item>
+    
+    <item>
+      <title>Color Selection in Data Visualization</title>
+      <link>//localhost:1313/post/2020-09-08-beautifulcolors/</link>
+      <pubDate>Tue, 08 Sep 2020 01:28:35 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-09-08-beautifulcolors/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;a href=&#34;https://blog.datawrapper.de/beautifulcolors/&#34; target=&#34;_blank&#34;&gt;How to pick more beautiful colors for your data visualizations&lt;/a&gt;&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Uses</title>
+      <link>//localhost:1313/uses/</link>
+      <pubDate>Sat, 29 Aug 2020 19:15:32 +0800</pubDate>
+      
+      <guid>//localhost:1313/uses/</guid>
+      <description>Hardware  MacBook Pro 13-inch (2017) iPad Pro 12.9 (2017) AirPods (2019) Logitech MX Master 3 Keychron K2  Software  1Password Day One DEVONthink 3 Drafts Due Fantastical 3 Figma iTerm 2 Obsidian Pocket Casts RStudio Things Trello Visual Studio Code  </description>
+    </item>
+    
+    <item>
+      <title>Self-host RSS</title>
+      <link>//localhost:1313/post/2020-08-29-self-host-rss/</link>
+      <pubDate>Sat, 29 Aug 2020 16:52:40 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-08-29-self-host-rss/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; According to Miniflux&amp;rsquo;s &lt;a href=&#34;https://miniflux.app/docs/services.html&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt;, refreshing feeds is not possible with Reeder since no user information is sent. This means, I can only fetch something new when the server side refreshes (by default, it&amp;rsquo;s once an hour), no matter what syncing frequency I set in the application. That&amp;rsquo;s definitely a bummer. But I will keep an eye on this. Maybe it will eventually become a turning point when I finally quit information overdosing.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>COVID confirmed cases Shortcut</title>
+      <link>//localhost:1313/post/2020-06-14-covid-shortcut/</link>
+      <pubDate>Sun, 14 Jun 2020 23:45:37 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-14-covid-shortcut/</guid>
+      <description>This post is a subsequent blog to my daily experience basically in the last two months. As the general situation of the COVID-19 pandemic in Australian Capital Territory keeps is keeping stable, sometimes I almost forget to check on this Shortcut.</description>
+    </item>
+    
+    <item>
+      <title>99 days of Decluttering</title>
+      <link>//localhost:1313/post/2020-06-13-decluttering/</link>
+      <pubDate>Sat, 13 Jun 2020 23:48:56 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-13-decluttering/</guid>
+      <description>&lt;p&gt;99 days ago, at some moment on that day, I told myself “hey bro, it’s time to kiss goodbye to those old residents crawling in your read-it-later-but-never-know-when-ish reading list and something like that”.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>DEVONthink 备份清扫</title>
+      <link>//localhost:1313/post/2020-06-09-devonthink-backup-cleanup/</link>
+      <pubDate>Tue, 09 Jun 2020 22:40:29 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-09-devonthink-backup-cleanup/</guid>
+      <description>&lt;p&gt;Devon 本意是英国的德文郡，由于此地的地层最早被研究，便用 Devonian 称呼在此处发现的特地地层。尔后翻译为中文便唤做「泥盆纪」。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Late to the party</title>
+      <link>//localhost:1313/post/2020-06-05-late-party/</link>
+      <pubDate>Fri, 05 Jun 2020 00:03:24 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-06-05-late-party/</guid>
+      <description>As a fellow redditor, I can naturally tell you what is trending on the /r/dataisbeautiful subreddit. Beautiful (or maybe not) charts come and go. One or two years back, there were ridge plots aka joy plots.</description>
+    </item>
+    
+    <item>
+      <title>Air Avo is online!</title>
+      <link>//localhost:1313/post/2020-04-21-air-avo/</link>
+      <pubDate>Tue, 21 Apr 2020 00:08:01 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-04-21-air-avo/</guid>
+      <description>Inspired by Stefan’s blog post, I set up my own photo stream as well. It’s called Air Avo, a self-hosted photo scream based on a repo by Tim Van Damme.</description>
+    </item>
+    
+    <item>
+      <title>From sentRy to Sentry</title>
+      <link>//localhost:1313/post/2020-02-14-sentry/</link>
+      <pubDate>Fri, 14 Feb 2020 00:09:52 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-02-14-sentry/</guid>
+      <description>&lt;h2 id=&#34;tldr&#34;&gt;tl;dr&lt;/h2&gt;
+&lt;p&gt;&lt;img class=&#34;img-zoomable&#34; src=&#34;//localhost:1313/image/sentry-map.png&#34; alt=&#34;img&#34; /&gt;
+&lt;/p&gt;
+&lt;p&gt;Implemented an alerting (kinda hard to call it &amp;ldquo;monitoring&amp;rdquo;) system for Django with R Server and a Telegram bot.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>radian and janitor</title>
+      <link>//localhost:1313/post/2020-01-31-radian-and-janitor/</link>
+      <pubDate>Fri, 31 Jan 2020 16:52:40 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-01-31-radian-and-janitor/</guid>
+      <description>&lt;p&gt;两个好东西：&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/randy3k/radian&#34; target=&#34;_blank&#34;&gt;radian&lt;/a&gt;. 号称是「A 21 century R console」.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Writing R codes on an iPad Pro</title>
+      <link>//localhost:1313/post/2019-11-25-r-on-ipad/</link>
+      <pubDate>Mon, 25 Nov 2019 00:20:57 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-11-25-r-on-ipad/</guid>
+      <description>Two weeks ago I sent my 2017 model of MacBook Pro to our local Genius Bar to replace the keyboard and the battery. During this one week span of absence, I moved to my iPad Pro to finish the Australian universities&amp;rsquo; course information scraping.</description>
+    </item>
+    
+    <item>
+      <title>30 分钟 Discourse 论坛搭建笔记</title>
+      <link>//localhost:1313/post/2019-10-21-30-min-discourse/</link>
+      <pubDate>Mon, 21 Oct 2019 22:42:57 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-10-21-30-min-discourse/</guid>
+      <description>&lt;p&gt;如果顺利的话，30 分钟应该够。实际上我大概花了 2 个小时，主要周旋于各家邮件服务提供商之间。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>How to download files from AWS EC2</title>
+      <link>//localhost:1313/post/2019-09-30-ec2-download/</link>
+      <pubDate>Mon, 30 Sep 2019 23:38:21 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-09-30-ec2-download/</guid>
+      <description>&lt;p&gt;&lt;strike&gt;SCP&lt;/strike&gt; &lt;code&gt;scp&lt;/code&gt; is always our friend.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Circular Permutation</title>
+      <link>//localhost:1313/post/2019-09-10-circular-permutation/</link>
+      <pubDate>Tue, 10 Sep 2019 23:10:51 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-09-10-circular-permutation/</guid>
+      <description>&lt;p&gt;A colleague had a coding interview for Huawei last Sunday. I heard the second question was quite “mathematical”. Let me rephrase it here a little bit.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>The Lost R Packages (after updating R)</title>
+      <link>//localhost:1313/post/2019-07-24-the-lost-r-packages/</link>
+      <pubDate>Wed, 24 Jul 2019 00:23:57 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-07-24-the-lost-r-packages/</guid>
+      <description>On Windows, we have a package called installr. Use function copy.packages.between.libraries(), then problem solved.
+On macOS, unfortunately, we don’t have that handy tool.
+But we can still use the following to retrieve all current installed packages’ names:</description>
+    </item>
+    
+    <item>
+      <title>Pokémon Recoloring</title>
+      <link>//localhost:1313/post/2019-04-17-pokemon-recoloring/</link>
+      <pubDate>Wed, 17 Apr 2019 23:32:22 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-04-17-pokemon-recoloring/</guid>
+      <description>Inspired by Alex Onsager and his wacky web app Pokemon Fusion, I was thinking about improving his approaches myself. In his post Pokemon Fusion: Behind the Scenes, he explains how he makes the head-swapping.</description>
+    </item>
+    
+    <item>
+      <title>What a Rmd Cheatsheet Doesn&#39;t Tell Me</title>
+      <link>//localhost:1313/post/2019-04-16-rmd-cheatsheet/</link>
+      <pubDate>Tue, 16 Apr 2019 23:54:03 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-04-16-rmd-cheatsheet/</guid>
+      <description>Updated on 2020-08-29: I&amp;rsquo;ve migrated my blog from blogdown to hugo so this post might be outdated. See the original post for examples.
+Updated on 2019-09-08: Today I realized the best approach to insert a centered image inside a html-supported markdown post is:</description>
+    </item>
+    
+    <item>
+      <title>Travel Time Polygon with osrm</title>
+      <link>//localhost:1313/post/2019-04-01-travel-time-polygon/</link>
+      <pubDate>Mon, 01 Apr 2019 23:26:51 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-04-01-travel-time-polygon/</guid>
+      <description>OpenStreetMap&amp;rsquo;s OSRM (Open Source Routing Machine) provides not only routing service, but a feature that enables drawing multiple routes to form a time-based polygon range as well. This is also called an isochrone.</description>
+    </item>
+    
+    <item>
+      <title>What does Top-Rated Mean in Reddit’s Ranking System</title>
+      <link>//localhost:1313/post/2019-03-02-reddit-ranking/</link>
+      <pubDate>Sat, 02 Mar 2019 22:56:07 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-03-02-reddit-ranking/</guid>
+      <description>&lt;p&gt;Though Reddit&amp;rsquo;s comment sorting system has been in use for almost a decade, the fact is that I wasn&amp;rsquo;t so exposed to western internet community till 2013, it is still, a rather new thing to me.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>如何部署一台数据科学专用的简易服务器</title>
+      <link>//localhost:1313/post/2019-01-02-deploy-a-server-for-data-science/</link>
+      <pubDate>Sat, 12 Jan 2019 16:52:40 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-01-02-deploy-a-server-for-data-science/</guid>
+      <description>主要是两个部分，一个是 conda，一个是 MySQL. 准备 在Vultr上</description>
+    </item>
+    
+    <item>
+      <title>A Sneak Peek at Apple Watch Health Data</title>
+      <link>//localhost:1313/post/2018-11-26-apple-watch-health-data/</link>
+      <pubDate>Mon, 26 Nov 2018 23:17:51 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2018-11-26-apple-watch-health-data/</guid>
+      <description>I&amp;rsquo;ve always been wondering if Apple could utilize its collected health data in a more elegant way. The Activity app is decent, especially the achievements inside are definitely highlights in an iPhone x Apple Watch dynamic duo.</description>
+    </item>
+    
+    <item>
+      <title>Visualizing Hearthstone Pack Opening with Animation</title>
+      <link>//localhost:1313/post/2018-08-08-hearthstone/</link>
+      <pubDate>Wed, 08 Aug 2018 22:59:54 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2018-08-08-hearthstone/</guid>
+      <description>So today marks the release date of the latest Hearthstone expansion Dr. Boom&amp;rsquo;s Project The Boomsday Project. As usual, I&amp;rsquo;ve done some pack opening with my pal. But this time, I&amp;rsquo;ve also taken down some data and made a simple scatterplot (maybe?</description>
+    </item>
+    
+    <item>
+      <title>Basic Web Scraping with rvest</title>
+      <link>//localhost:1313/post/2018-06-26-basic-web-scraping-with-rvest/</link>
+      <pubDate>Tue, 26 Jun 2018 22:51:44 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2018-06-26-basic-web-scraping-with-rvest/</guid>
+      <description>The post here demonstrates an example of Hacker News scraper with rvest library.
+But a tiny problem emerges as sometimes YC-funded startup post job ads on the front page so that the scraper would find different information vector with different lengths.</description>
+    </item>
+    
+    <item>
+      <title>Drawing Trajectory of Peter de Jong Attractors with ggplot2</title>
+      <link>//localhost:1313/post/2018-01-08-de-jong-attractors/</link>
+      <pubDate>Mon, 08 Jan 2018 16:52:40 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2018-01-08-de-jong-attractors/</guid>
+      <description>&lt;p&gt;The design was inspired by a blog on &lt;a href=&#34;https://fronkonstin.com/2017/11/07/drawing-10-million-points-with-ggplot-clifford-attractors/&#34; target=&#34;_blank&#34;&gt;Fronkonstin: Experiments in R&lt;/a&gt;. I modified the code a little bit, so that the output is generated by &lt;a href=&#34;http://paulbourke.net/fractals/peterdejong/&#34; target=&#34;_blank&#34;&gt;Peter de Jong Attractors&lt;/a&gt; instead of &lt;a href=&#34;http://paulbourke.net/fractals/clifford/&#34; target=&#34;_blank&#34;&gt;Clifford Attractors&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

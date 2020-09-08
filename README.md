@@ -4,6 +4,12 @@ A new old friend. Currently using `interetro.xyz` as domain name.
 
 Made some modifications based on [Fuji](https://github.com/amzrk2/hugo-theme-fuji/).
 
+## Update Submodule
+
+```bash
+git submodule update --remote --merge
+```
+
 ## TODO
 
 - [ ] check 404

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self-host on @qrui - interetro.xyz</title>
+    <link>//localhost:1313/tags/self-host/</link>
+    <description>Recent content in Self-host on @qrui - interetro.xyz</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 29 Aug 2020 16:52:40 +1000</lastBuildDate>
+    
+	<atom:link href="//localhost:1313/tags/self-host/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Self-host RSS</title>
+      <link>//localhost:1313/post/2020-08-29-self-host-rss/</link>
+      <pubDate>Sat, 29 Aug 2020 16:52:40 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2020-08-29-self-host-rss/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; According to Miniflux&amp;rsquo;s &lt;a href=&#34;https://miniflux.app/docs/services.html&#34; target=&#34;_blank&#34;&gt;documentation&lt;/a&gt;, refreshing feeds is not possible with Reeder since no user information is sent. This means, I can only fetch something new when the server side refreshes (by default, it&amp;rsquo;s once an hour), no matter what syncing frequency I set in the application. That&amp;rsquo;s definitely a bummer. But I will keep an eye on this. Maybe it will eventually become a turning point when I finally quit information overdosing.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>30 分钟 Discourse 论坛搭建笔记</title>
+      <link>//localhost:1313/post/2019-10-21-30-min-discourse/</link>
+      <pubDate>Mon, 21 Oct 2019 22:42:57 +1000</pubDate>
+      
+      <guid>//localhost:1313/post/2019-10-21-30-min-discourse/</guid>
+      <description>&lt;p&gt;如果顺利的话，30 分钟应该够。实际上我大概花了 2 个小时，主要周旋于各家邮件服务提供商之间。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

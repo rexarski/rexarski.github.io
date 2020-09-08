@@ -18,9 +18,9 @@ curl -X POST -d {} https://api.netlify.com/build_hooks/xxxxxxxxxxxxx
 
 ## TODO
 
-- [ ] fix missing tags in deployment
-- [ ] add mobile responsive support
+- [x] fix missing tags in deployment
 - [x] check 404
+- [ ] add mobile responsive support
 - [ ] [favicon](https://realfavicongenerator.net/)
 - [ ] add Google analytics, `googleAnalytics`
 - [ ] `description = "A minimal Hugo theme with nice theme color."`

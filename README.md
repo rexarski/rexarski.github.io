@@ -10,6 +10,12 @@ Made some modifications based on [Fuji](https://github.com/amzrk2/hugo-theme-fuj
 git submodule update --remote --merge
 ```
 
+## Trigger a build through a build hook
+
+```bash
+curl -X POST -d {} https://api.netlify.com/build_hooks/5f56d6021e2b2f75efb672f7
+```
+
 ## TODO
 
 - [ ] check 404

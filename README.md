@@ -13,12 +13,14 @@ git submodule update --remote --merge
 ## Trigger a build through a build hook
 
 ```bash
-curl -X POST -d {} https://api.netlify.com/build_hooks/5f56d6021e2b2f75efb672f7
+curl -X POST -d {} https://api.netlify.com/build_hooks/xxxxxxxxxxxxx
 ```
 
 ## TODO
 
-- [ ] check 404
+- [ ] fix missing tags in deployment
+- [ ] add mobile responsive support
+- [x] check 404
 - [ ] [favicon](https://realfavicongenerator.net/)
 - [ ] add Google analytics, `googleAnalytics`
 - [ ] `description = "A minimal Hugo theme with nice theme color."`

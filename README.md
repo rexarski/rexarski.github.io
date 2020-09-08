@@ -20,10 +20,10 @@ curl -X POST -d {} https://api.netlify.com/build_hooks/xxxxxxxxxxxxx
 
 - [x] fix missing tags in deployment
 - [x] check 404
-- [ ] add mobile responsive support
-- [ ] [favicon](https://realfavicongenerator.net/)
-- [ ] add Google analytics, `googleAnalytics`
-- [ ] `description = "A minimal Hugo theme with nice theme color."`
+- [x] favicon
+- [x] add Google analytics, `googleAnalytics`
+- [x] `description = "A minimal Hugo theme with nice theme color."`
 - [ ] `images = ["img/og.png"] # This will use the image called og.png in static/img folder`
 - [ ] GitHub script css fix in dark theme
 - [ ] syntax highlighting for more languages (?)
+- [ ] add mobile responsive support

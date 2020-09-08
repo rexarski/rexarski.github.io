@@ -15,7 +15,7 @@ languageCode = "en" # For RSS, view https://www.rssboard.org/rss-language-codes
 paginate = 5 
 summaryLength = 30 # Custom summary length, add <!--more--> in post file to custom split point
 
-# googleAnalytics = "UA-000000000-0" # Set your Google Analytics UA here
+googleAnalytics = "UA-80926729-1" # Set your Google Analytics UA here
 
 [outputFormats]
 [outputFormats.SearchIndex]
@@ -54,7 +54,7 @@ showToc = false
 
 # Open Graph & Twitter Card variables
 # You can also set description and images in post front matter individually
-description = "A minimal Hugo theme with nice theme color."
+description = "A blog of Qiū Ruì"
 images = ["img/og.png"] # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage

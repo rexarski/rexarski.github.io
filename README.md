@@ -27,3 +27,4 @@ curl -X POST -d {} https://api.netlify.com/build_hooks/xxxxxxxxxxxxx
 - [ ] GitHub script css fix in dark theme
 - [ ] syntax highlighting for more languages (?)
 - [ ] add mobile responsive support
+- [ ] customize blog fonts

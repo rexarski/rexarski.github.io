@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: "2020-09-08T00:18:32+08:00"
+date: "2020-09-29T17:03:32+10:00"
 noLicense: true
 ---
 
@@ -29,4 +29,4 @@ In the past:
 
 This page is inspired by [nownownow](https://nownownow.com/about). It serves as a common "about" page but highlights what I am doing instead of who I am.
 
-My email address is qiu rui 416 at Google's email dot com.
+My email address is `qrui at hey dot com`.

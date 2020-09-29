@@ -4,9 +4,9 @@ https://keybase.io/rexarski
 
 I hereby claim:
 
-  * I am an admin of https://interetro.xyz
+  * I am an admin of https://qrui.xyz
   * I am rexarski (https://keybase.io/rexarski) on keybase.
-  * I have a public key with fingerprint 56BC AFC4 48A1 9D30 9522  4FEE 86AB F8A5 E6BB A7E7
+  * I have a public key ASD3uzI5rkhwefjqhtuyxs_oQt-0Ew5m8IS0L1pQ0lAwVgo
 
 To do so, I am signing this object:
 
@@ -14,58 +14,39 @@ To do so, I am signing this object:
   "body": {
     "key": {
       "eldest_kid": "0120cdc32bf49401a4eae18b2d473b7205c821c29cb1136ef983c5c693dc22e5bd050a",
-      "fingerprint": "56bcafc448a19d3095224fee86abf8a5e6bba7e7",
       "host": "keybase.io",
-      "key_id": "86abf8a5e6bba7e7",
-      "kid": "01019e8f997ac8ab86d76b41cb6d95b7e590ea2721547e1a482b1a739c1c270502d80a",
+      "kid": "0120f7bb3239ae487079f8ea86dbb2c6cfe842dfb4130e66f084b42f5a50d25030560a",
       "uid": "083335b3dc971ce1e84ac655a9c23019",
       "username": "rexarski"
     },
+    "merkle_root": {
+      "ctime": 1601389790,
+      "hash": "ac80b2019215d6fceeb722a6034db4ab91f35159e515d60d181b7a51da3c745048f7c83de3d9bc6611a404ce9b6a87e142f7dcda743d769637b68e934e5ccb2b",
+      "hash_meta": "bbb447310d09777e256b65531e4c2841d5d7f3a9baa00958482ab158c40cc711",
+      "seqno": 17701874
+    },
     "service": {
-      "hostname": "interetro.xyz",
+      "entropy": "1AiwzYXvmHCearal1gvuSXq0",
+      "hostname": "qrui.xyz",
       "protocol": "https:"
     },
     "type": "web_service_binding",
-    "version": 1
+    "version": 2
   },
-  "ctime": 1598938030,
-  "expire_in": 157680000,
-  "prev": "f7dc46e49200b07948c14dd76c96dca9a5b0c2767167692f236d30267cb98740",
-  "seqno": 36,
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1601389880,
+  "expire_in": 504576000,
+  "prev": "8a01fa1976cd31836cd65c20c1407c98697829e6e190ac3ab748d2d5922d55c1",
+  "seqno": 37,
   "tag": "signature"
 }
 
 which yields the signature:
 
------BEGIN PGP MESSAGE-----
-Version: Keybase OpenPGP v2.1.13
-Comment: https://keybase.io/crypto
-
-yMNyAnicbVJrUFRVAF4s5DWiFphjFHoJRpDB+773bINDAb56aTNBJrDee+7Z9Q5w
-77J7QR7yyClevkpmcEKcqWmIGtJsVCZ5jWBMEFqoOMPDIAvbAhIqXDSM7Szpv86f
-M+ec7/vO933nfL3sMVOgT3nTvYZfWhtdPn2dH+SaLK+MnC4iZF0pIMxFRCZanFCW
-gpyGJVNVCDNBUjQJFcjQspUFLElJLJIQJcq0wgqMLNAkB0WagjSAMkUxPLICkYEc
-5AGjQJpGnKyQHCkRsYRV1WzIYXeomoFlOV6GkhWyrChRQGFIwNE0a0VI5CXZKkoc
-4mVZEpCAiXt1p5eBzcmSE8WpOt7DC8uivf/BP/JNUgCJVgAECYqSLPKKwMssBWVe
-AZwsIA6QSKIFmuJYAeFYIi1TksAAiMMI2DOtiIu+c/+TExmG4WQcCggURBQSWQny
-HCcBSDP4Ji/QiRyalI0w2oHyJYczUyWKYwm8m6dC5C3Wm+QhAreAHMhw6HH5BYWY
-bHfohg71LHy01zDsTrOXahTYvdh9SLY8VLHIqqbgIjEjDzmcqq4RZgojoaF6ZSkO
-iIARSYaMJVC+XXUgi+pFcAIvknh470F5WNIqKJDlEQtokpRJAbAipFgFNwQBr0AJ
-SJxM4hp4geIFHtBWmuHxI9G8AGUgCixJeHPlaDphZnjsU7JhTadq0yQj14GI4q7O
-tMdNPoGmpb5LvD/MFBiw4tG/W8cvX9gQFWUK7zs70xMyOJT9RduPrlNHnnNfLw3Y
-M7Tblh0WkmoLGbj/Xdr97D96ySTU6jFWzu48cWWso2XSJ3E+XveMjh3onn3Z/em1
-u3eblohbk6dXHV/4+7U90TnUC0+ENl+fPeY3sm1uxMgcvTpAd/jVt9Xt8HTzw0Mv
-lSxojT99W1N/YcfO0+cnDv41Itb33PzkcHjw+ahk/8pnMipXmUqPlqwZ96Ve9NUq
-9IPJs/1VU4333urJrxYGm9v9Dp0b7j7w4Nfe9PaW3xK56g9Tps61Ztdv0RI6z3ba
-o8sjjJmcZ1P4pKiwprGbztq5p9o9M7c25m565+PZaVfFneP7boRmv5o0/o8xGFdR
-/nt9W/N7HVLi0avmhJNaUfC2qq/4K+s3F05cCAdiKd2+9vbM/omYZS35z7uUpaMZ
-ZYLro1suNv5M2nT7ru2uCjIy5tTrCyO7ffb3HUoeCCq75O/+PMjc9saduQRT2QnP
-l5c3vk/Fb8lxbIqT302fyog8kqILqZ9p8TciFFh5cSC3p6u/YPub5M/pY4ftYbdP
-rlsR4V8XEJlUo3/DrPy+I/nieqIiZqJHD47ODDg2NT5a2/vDrpqA+T/rzphWr9lQ
-tbV4prqo0n1pMqug31cZi39atQURyyvcayevDU80JBa2AK3E7JlveNIeJq22gLe7
-B0L7otzk5gddtZdTjZ6ifwEBvdI4
-=t2Vg
------END PGP MESSAGE-----
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg97syOa5IcHn46obbssbP6ELftBMOZvCEtC9aUNJQMFYKp3BheWxvYWTESpcCJcQgigH6GXbNMYNs1lwgwUB8mGl4KebhkKw6t0jS1ZItVcHEIO+wKpQ3QxcuSwwhU5ssSnYiGyJkyuRrvIkDkUplcCo4AgHCo3NpZ8RAeKzaCt4n7YEPceXZ0FuQTOo3o1WPBtr23Xg03tTPpCNYYp3yFuR4WT7xxnnUu106OrvNSOQ68KS5OkDJwceEA6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIC+Stg9u4f4ASmWXT6wA7kN/WVR2Cn4ir9GWAXHo++peo3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.

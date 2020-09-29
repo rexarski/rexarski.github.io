@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "@qrui - interetro.xyz"
+title = "@qrui"
 
 disableKinds = ["taxonomy"]
 enableEmoji = true

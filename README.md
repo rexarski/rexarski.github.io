@@ -1,6 +1,6 @@
 # README
 
-A new old friend. Currently using `interetro.xyz` as domain name.
+A new old friend. Currently using `qrui.xyz` and `interetro.xyz` as domain name.
 
 Made some modifications based on [Fuji](https://github.com/amzrk2/hugo-theme-fuji/).
 

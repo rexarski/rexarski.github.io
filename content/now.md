@@ -10,7 +10,7 @@ Currently:
 
 - living upside-down in Canberra, Australia.
 - working at a local start-up as a product manager.
-- been working from home since early 2020 due to the great fire.
+- been working from home since early 2020 due to the wildfire.
 - daily binge listen to podcasts.
 - self-learning [d3.js](https://d3js.org/) to improve my data viz skills.
 - learning blues harmonica and ui design at a quite slow pace.
@@ -18,6 +18,7 @@ Currently:
 - still looking for a perfect ramen shop around me.
 - music fan of [Glass Animals](https://www.youtube.com/channel/UCJTs-KheOMNstaGrDL4K55Q), [the Neighbourhood](https://thenbhd.com/), [Marc Rebillet](https://www.youtube.com/channel/UCXgxNzAgZ1GExhTW4X1mUrg) and [Postmodern Jukebox](https://www.youtube.com/channel/UCORIeT1hk6tYBuntEXsguLg).
 - favorite games in 2020 (so far): [Death Stranding](https://en.wikipedia.org/wiki/Death_Stranding) by Hideo Kojima.
+- passed [AWS Certified Cloud Practitioner](https://www.youracclaim.com/badges/02bde1d0-0a61-4ad3-a268-a73138b37855/public_url).
 
 In the past:
 

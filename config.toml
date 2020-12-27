@@ -55,7 +55,7 @@ showToc = false
 # Open Graph & Twitter Card variables
 # You can also set description and images in post front matter individually
 description = "A blog of Qiū Ruì"
-images = ["img/og.png"] # This will use the image called og.png in static/img folder
+images = ["img/open_graph.png"] # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
 mainSections = ["post"]

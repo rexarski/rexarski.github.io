@@ -24,7 +24,7 @@ curl -X POST -d {} https://api.netlify.com/build_hooks/xxxxxxxxxxxxx
 - [x] add Google analytics, `googleAnalytics`
 - [x] `description = "A minimal Hugo theme with nice theme color."`
 - [x] customize blog fonts
-- [ ] `images = ["img/og.png"] # This will use the image called og.png in static/img folder`
+- [x] `images = ["img/og.png"] # This will use the image called og.png in static/img folder`
 - [ ] GitHub script css fix in dark theme
 - [ ] syntax highlighting for more languages (?)
 - [x] add mobile responsive support

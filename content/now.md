@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: "2020-11-26T17:03:32+10:00"
+date: "2021-01-19T17:03:32+10:00"
 noLicense: true
 ---
 
@@ -19,6 +19,7 @@ Currently:
 - music fan of [Glass Animals](https://www.youtube.com/channel/UCJTs-KheOMNstaGrDL4K55Q), [the Neighbourhood](https://thenbhd.com/), [Marc Rebillet](https://www.youtube.com/channel/UCXgxNzAgZ1GExhTW4X1mUrg) and [Postmodern Jukebox](https://www.youtube.com/channel/UCORIeT1hk6tYBuntEXsguLg).
 - favorite games in 2020 (so far): [Death Stranding](https://en.wikipedia.org/wiki/Death_Stranding) by Hideo Kojima.
 - passed [AWS Certified Cloud Practitioner](https://www.youracclaim.com/badges/02bde1d0-0a61-4ad3-a268-a73138b37855/public_url).
+- My [List of 2021](https://www.notion.so/rqiu/4550aa0bf3894353b9816af5084b48fd?v=aee2730e660b42e486cacc7b42e11ed6).
 
 In the past:
 

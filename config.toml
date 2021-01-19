@@ -117,43 +117,47 @@ name = "Now"
 url = "/now/"
 weight = 2
 [[menu.nav]]
-name = "Uses"
-url = "/uses/"
-weight = 3
-[[menu.nav]]
 name = "Archives"
 url = "/archives/"
-weight = 4
+weight = 3
 [[menu.nav]]
 name = "Search"
 url = "/search/"
-weight = 5
+weight = 4
 [[menu.nav]]
 name = "RSS"
 url = "/index.xml"
-weight = 6
+weight = 5
 
-[[menu.link]]
-name = "GitHub"
-url = "https://github.com/rexarski"
-weight = 1
-[[menu.link]]
-name = "Twitter"
-url = "https://twitter.com/rexarski"
-weight = 2
 [[menu.link]]
 name = "Gallery"
 url = "https://airavo.netlify.app"
+weight = 1
+[[menu.link]]
+name = "GitHub"
+url = "https://github.com/rexarski"
+weight = 2
+[[menu.link]]
+name = "Goodreads"
+url = "https://www.goodreads.com/user/show/66423413-ru"
 weight = 3
 [[menu.link]]
 name = "Keybase"
 url = "https://keybase.io/rexarski/chat"
 weight = 4
 [[menu.link]]
-name = "Telegram"
-url = "https://t.me/itsnopie"
-weight = 5
-[[menu.link]]
 name = "Pinboard"
 url = "https://pinboard.in/u:rexarski"
+weight = 5
+[[menu.link]]
+name = "Telegram"
+url = "https://t.me/itsnopie"
 weight = 6
+[[menu.link]]
+name = "Twitter"
+url = "https://twitter.com/rexarski"
+weight = 7
+[[menu.link]]
+name = "豆瓣"
+url = "https://www.douban.com/people/rexarski/"
+weight = 8

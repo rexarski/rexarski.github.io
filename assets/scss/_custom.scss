@@ -2,7 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
-$body-font: 'Lato',
+$body-font:
+'Merriweather',
+'Lato',
 -apple-system,
 BlinkMacSystemFont,
 'SF Pro Text',
@@ -21,7 +23,7 @@ $mono-font: 'Cascadia Code',
 'Fira Code',
 'Consolas',
 $body-font;
-$title-font: 'Montserrat',
+$title-font: 'Merriweather', 'Montserrat',
 'Product Sans',
 $body-font;
 $body-font-size: 16px;

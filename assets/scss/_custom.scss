@@ -1,6 +1,6 @@
 // wtb covered
 
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 $body-font:
 'Merriweather',
@@ -45,3 +45,12 @@ $dark-color-font: #c0c0c0; // https://irocore.com/gin-iro/
 $dark-color-divider: #4d5158; // Discord
 $dark-color-bg: #2f3136; // Discord
 $dark-color-codebg: #414449; // GitHub
+
+.post {
+  padding: 0 0 0.5rem 0 !important;
+
+  span {
+    font-size: 10px;
+    text-align: right;
+  }
+}

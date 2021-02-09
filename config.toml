@@ -58,7 +58,8 @@ description = "A blog of Qiū Ruì"
 og = "/img/open_graph.png" # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
-mainSections = ["post"]
+mainSections = ["post", "nopie"]
+nopieSections = ["nopie"]
 
 # Bangumi image chart id
 # bgmImageChart = "000000"
@@ -113,21 +114,25 @@ name = "Home"
 url = "/"
 weight = 1
 [[menu.nav]]
+name = "No Pie Weekly"
+url = "/nopie/"
+weight = 2
+[[menu.nav]]
 name = "Now"
 url = "/now/"
-weight = 2
+weight = 3
 [[menu.nav]]
 name = "Archives"
 url = "/archives/"
-weight = 3
+weight = 4
 [[menu.nav]]
 name = "Search"
 url = "/search/"
-weight = 4
+weight = 5
 [[menu.nav]]
 name = "RSS"
 url = "/index.xml"
-weight = 5
+weight = 6
 
 [[menu.link]]
 name = "Gallery"

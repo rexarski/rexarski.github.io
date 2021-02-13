@@ -52,7 +52,7 @@ heatmap(as.matrix(mtcars), scale="column", col = pal)
 - [x] [`pkgdown`](https://pkgdown.r-lib.org) set up.
 - [x] [`codemeta.json`](https://docs.ropensci.org/codemetar/index.html)
 - [x] Turn `NEWS.md` to a separate page in `pkgdown` website with `pkgdown::build_news()`
-- [ ] Add color palettes of *The Hateful Eight* and *Once Upon a Time in Hollywood*.
+- [x] *Updated on 2021-02-13.* Add color palettes of *The Hateful Eight* and *Once Upon a Time in Hollywood*.
 - [ ] Publish the `pkgdown` site with GitHub Actions.
 
 ***

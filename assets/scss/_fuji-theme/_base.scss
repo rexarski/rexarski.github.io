@@ -22,21 +22,12 @@
   --color-codebg: #{$dark-color-codebg};
 }
 
-// body[data-theme='auto'] {
-//   @include light();
-
-//   @media (prefers-color-scheme: dark) {
-//     @include dark();
-//     @import '_dark-diff'; // things different from light
-//   }
-// }
-
 body[data-theme='auto'] {
-  @include dark();
-  @import '_dark-diff'; // things different from light
+  @include light();
 
-  @media (prefers-color-scheme: light) {
-    @include light();
+  @media (prefers-color-scheme: dark) {
+    @include dark();
+    @import '_dark-diff'; // things different from light
   }
 }
 

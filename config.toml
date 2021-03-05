@@ -135,34 +135,38 @@ url = "/index.xml"
 weight = 6
 
 [[menu.link]]
-name = "Gallery"
+name = "📷 Gallery"
 url = "https://airavo.netlify.app"
 weight = 1
 [[menu.link]]
-name = "GitHub"
+name = "🐱 GitHub"
 url = "https://github.com/rexarski"
 weight = 2
 [[menu.link]]
-name = "Goodreads"
+name = "🔖 Goodreads"
 url = "https://www.goodreads.com/user/show/66423413-ru"
 weight = 3
 [[menu.link]]
-name = "Keybase"
+name = "🗝 Keybase"
 url = "https://keybase.io/rexarski/chat"
 weight = 4
 [[menu.link]]
-name = "Pinboard"
+name = "📌 Pinboard"
 url = "https://pinboard.in/u:rexarski"
 weight = 5
 [[menu.link]]
-name = "Telegram"
+name = "🔔 Telegram"
 url = "https://t.me/itsnopie"
 weight = 6
 [[menu.link]]
-name = "Twitter"
+name = "🐦 Twitter"
 url = "https://twitter.com/rexarski"
 weight = 7
 [[menu.link]]
-name = "豆瓣"
+name = "🌱 豆瓣"
 url = "https://www.douban.com/people/rexarski/"
 weight = 8
+[[menu.link]]
+name = "📥 Newsletter"
+url = "https://world.hey.com/qrui"
+weight = 9

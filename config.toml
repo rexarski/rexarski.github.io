@@ -60,6 +60,7 @@ og = "/img/open_graph.png" # This will use the image called og.png in static/img
 # Posts shown in homepage
 mainSections = ["post"]
 nopieSections = ["nopie"]
+projectSections = ["project"]
 
 # Bangumi image chart id
 # bgmImageChart = "000000"
@@ -114,7 +115,7 @@ name = "Home"
 url = "/"
 weight = 1
 [[menu.nav]]
-name = "No Pie Weekly"
+name = "不画饼周报"
 url = "/nopie/"
 weight = 2
 [[menu.nav]]
@@ -122,55 +123,59 @@ name = "Now"
 url = "/now/"
 weight = 3
 [[menu.nav]]
+name = "Project"
+url = "/project/"
+weight = 4
+[[menu.nav]]
 name = "Archives"
 url = "/archives/"
-weight = 4
+weight = 5
 [[menu.nav]]
 name = "Search"
 url = "/search/"
-weight = 5
+weight = 6
 [[menu.nav]]
 name = "RSS"
 url = "/index.xml"
-weight = 6
+weight = 7
 
 [[menu.link]]
-name = "📷 Gallery"
+name = "gallery"
 url = "https://airavo.netlify.app"
 weight = 1
 [[menu.link]]
-name = "🐱 GitHub"
+name = "github"
 url = "https://github.com/rexarski"
 weight = 2
 [[menu.link]]
-name = "📖 Goodreads"
+name = "goodreads"
 url = "https://www.goodreads.com/user/show/66423413-ru"
 weight = 3
 [[menu.link]]
-name = "🖌 Hypothes.is"
+name = "hypothes.is"
 url = "https://hypothes.is/users/rexarski"
 weight = 4
 [[menu.link]]
-name = "🗝 Keybase"
+name = "keybase"
 url = "https://keybase.io/rexarski/chat"
 weight = 5
 [[menu.link]]
-name = "📥 Newsletter"
+name = "newsletter"
 url = "https://world.hey.com/qrui"
 weight = 6
 [[menu.link]]
-name = "📌 Pinboard"
+name = "pinboard"
 url = "https://pinboard.in/u:rexarski"
 weight = 7
 [[menu.link]]
-name = "📣 Telegram"
+name = "telegram"
 url = "https://t.me/itsnopie"
 weight = 8
 [[menu.link]]
-name = "🐦 Twitter"
+name = "twitter"
 url = "https://twitter.com/rexarski"
 weight = 9
 [[menu.link]]
-name = "🌱 豆瓣"
+name = "douban"
 url = "https://www.douban.com/people/rexarski/"
 weight = 10

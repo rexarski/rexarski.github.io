@@ -58,7 +58,7 @@ description = "A blog of Qiū Ruì"
 og = "/img/open_graph.png" # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
-mainSections = ["post", "nopie"]
+mainSections = ["post"]
 nopieSections = ["nopie"]
 
 # Bangumi image chart id

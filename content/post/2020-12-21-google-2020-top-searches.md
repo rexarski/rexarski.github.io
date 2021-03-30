@@ -6,7 +6,7 @@ description: ""
 draft: false
 tags: ["R", "Visualization"]
 math: false
-showToc: true
+showToc: false
 ---
 
 <img class="special-img-class" style="width:100%" src="/image/top-searches-2020.png" />

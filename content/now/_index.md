@@ -28,4 +28,18 @@ Previously:
 
 > This page is inspired by [nownownow](https://nownownow.com/about). It serves as a common "about" page but highlights what I am doing instead of who I am.
 
+***
+
+And you can find me at the following hideouts:
+
+- [gallery](https://airavo.netlify.app)
+- [github](https://github.com/rexarski)
+<!-- - [goodreads](https://www.goodreads.com/user/show/66423413-ru) -->
+- [hypothes.is](https://hypothes.is/users/rexarski)
+- [keybase](https://keybase.io/rexarski/chat)
+- [pinboard](https://pinboard.in/u:rexarski)
+- [telegram](https://t.me/itsnopie)
+- [twitter](https://twitter.com/rexarski)
+<!-- - [douban](https://www.douban.com/people/rexarski/) -->
+
 My email address is `qrui at hey dot com`.

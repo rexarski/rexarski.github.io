@@ -6,7 +6,7 @@ description: ""
 draft: false
 tags: ["R"]
 math: false
-showToc: true
+showToc: false
 ---
 
 I followed the [tutorial](https://www.pipinghotdata.com/posts/2020-10-25-your-first-r-package-in-1-hour/) to get myself familiar with some basics of R package development. Really like the table summary with commands in the end.

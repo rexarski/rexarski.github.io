@@ -111,7 +111,7 @@ tag = "tags"
 
 [menu]
 [[menu.nav]]
-name = "Home"
+name = "home"
 url = "/"
 weight = 1
 [[menu.nav]]
@@ -119,23 +119,23 @@ name = "不画饼周报"
 url = "/nopie/"
 weight = 2
 [[menu.nav]]
-name = "Now"
+name = "now"
 url = "/now/"
 weight = 3
 [[menu.nav]]
-name = "Project"
+name = "project"
 url = "/project/"
 weight = 4
 [[menu.nav]]
-name = "Archives"
+name = "archives"
 url = "/archives/"
 weight = 5
 [[menu.nav]]
-name = "Search"
+name = "search"
 url = "/search/"
 weight = 6
 [[menu.nav]]
-name = "RSS"
+name = "rss"
 url = "/index.xml"
 weight = 7
 

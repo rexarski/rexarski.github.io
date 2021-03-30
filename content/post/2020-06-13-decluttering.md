@@ -1,5 +1,5 @@
 ---
-title: "99 days of Decluttering"
+title: "99 days of decluttering"
 date: 2020-06-13T23:48:56+10:00
 slug: "decluttering"
 description: ""

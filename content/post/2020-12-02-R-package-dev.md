@@ -1,5 +1,5 @@
 ---
-title: "A Quickstart to R Package Dev"
+title: "A quickstart to R package development"
 date: 2020-12-02T22:10:34+10:00
 slug: "r-package-dev"
 description: ""

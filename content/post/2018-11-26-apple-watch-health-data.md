@@ -1,5 +1,5 @@
 ---
-title: "A Sneak Peek at Apple Watch Health Data"
+title: "A sneak peek at Apple Watch Health data"
 date: 2018-11-26T23:17:51+10:00
 slug: "apple-watch-health-data"
 description: ""

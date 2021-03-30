@@ -1,5 +1,5 @@
 ---
-title: "What does Top-Rated Mean in Reddit’s Ranking System"
+title: "What does top rated mean in Reddit’s ranking system"
 date: 2019-03-02T22:56:07+10:00
 slug: "reddit-ranking"
 description: ""

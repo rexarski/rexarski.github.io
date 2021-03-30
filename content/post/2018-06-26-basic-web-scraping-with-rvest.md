@@ -1,5 +1,5 @@
 ---
-title: "Basic Web Scraping with rvest"
+title: "Basic web scraping with rvest"
 date: 2018-06-26T22:51:44+10:00
 slug: "basic-web-scraping-with-rvest"
 description: ""

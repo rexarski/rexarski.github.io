@@ -1,5 +1,5 @@
 ---
-title: "Color Selection in Data Visualization"
+title: "Color selection in data visualization"
 date: 2020-09-08T01:28:35+10:00
 slug: "beautifulcolors"
 description: "desc"

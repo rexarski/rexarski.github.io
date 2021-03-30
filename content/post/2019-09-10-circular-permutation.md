@@ -1,5 +1,5 @@
 ---
-title: "Circular Permutation"
+title: "Circular permutation"
 date: 2019-09-10T23:10:51+10:00
 slug: "circular-permutation"
 description: ""

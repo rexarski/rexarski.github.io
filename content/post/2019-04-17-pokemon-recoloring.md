@@ -1,5 +1,5 @@
 ---
-title: "Pokémon Recoloring"
+title: "Pokémon recoloring"
 date: 2019-04-17T23:32:22+10:00
 slug: "pokemon-recoloring"
 description: ""

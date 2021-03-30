@@ -1,5 +1,5 @@
 ---
-title: "The Lost R Packages (after updating R)"
+title: "The lost R packages (after updating R)"
 date: 2019-07-24T00:23:57+10:00
 slug: "the-lost-r-packages"
 description: ""

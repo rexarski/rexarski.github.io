@@ -1,5 +1,5 @@
 ---
-title: "What a Rmd Cheatsheet Doesn't Tell Me"
+title: "What a Rmd cheatsheet doesn't tell me"
 date: 2019-04-16T23:54:03+10:00
 slug: "rmd-cheatsheet"
 description: ""

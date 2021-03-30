@@ -1,5 +1,5 @@
 ---
-title: "Travel Time Polygon with osrm"
+title: "Travel time polygon with osrm"
 date: 2019-04-01T23:26:51+10:00
 slug: "travel-time-polygon"
 description: ""

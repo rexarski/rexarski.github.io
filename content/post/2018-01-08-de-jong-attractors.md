@@ -1,5 +1,5 @@
 ---
-title: "Drawing Trajectory of Peter de Jong Attractors with ggplot2"
+title: "Drawing trajectory of Peter de Jong attractors with ggplot2"
 date: 2018-01-08T16:52:40+10:00
 slug: "de-jong-attractors"
 description: "Drawing."

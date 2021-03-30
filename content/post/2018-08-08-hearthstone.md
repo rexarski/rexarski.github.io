@@ -1,5 +1,5 @@
 ---
-title: "Visualizing Hearthstone Pack Opening with Animation"
+title: "Visualizing Hearthstone pack opening with animation"
 date: 2018-08-08T22:59:54+10:00
 slug: "hearthstone"
 description: ""

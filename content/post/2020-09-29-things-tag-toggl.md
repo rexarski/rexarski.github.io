@@ -1,5 +1,5 @@
 ---
-title: "On Productivity"
+title: "On productivity"
 date: 2020-09-29T20:07:49+10:00
 slug: "things-tag-toggl"
 description: "My recent thoughts about application-powered productivity."

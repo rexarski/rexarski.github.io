@@ -1,5 +1,5 @@
 ---
-title: "Late to the party"
+title: "Late to the party (of racing bar chart)"
 date: 2020-06-05T00:03:24+10:00
 slug: "late-party"
 description: ""

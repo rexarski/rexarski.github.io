@@ -1,5 +1,5 @@
 ---
-title: "Top Google Searches in 2020"
+title: "Top Google searches in 2020"
 date: 2020-12-21T16:07:11+11:00
 slug: "google-2020-top-searches"
 description: ""

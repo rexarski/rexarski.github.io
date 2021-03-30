@@ -1,78 +1,34 @@
 {{ define "main" }}
-<!-- homepage range in all posts -->
-{{ $paginator := .Paginate (where .Site.RegularPages "Type" "in" .Site.Params.projectSections) }}
-
-{{ range $paginator.Pages }}
-<div class="post">
-    {{/*  <h2 class="post-item post-title">
+<article>
+    <!-- post meta -->
+    <h2 class="post-item post-title">
         <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
     <div class="post-item post-meta">
-        {{ partial "post-meta.html" . }}
+        <span><i class="iconfont icon-today-sharp"></i>&nbsp;{{ .Date.Format "2006-01-02" }}</span>{{ if .Site.Params.showWordCounter }}<span><i class="iconfont icon-file-tray-sharp"></i>&nbsp;{{ i18n "postMetaWordCount" .WordCount}}</span>{{ end }}{{ if .Site.Params.showReadTime }}<span><i class="iconfont icon-time-sharp"></i>&nbsp;{{ i18n "postMetaReadingTime" .ReadingTime }}</span>{{ end }}
     </div>
-    <div class="post-item post-summary markdown-body">
-        {{ .Summary }}
-    </div>  */}}
-    {{/*  <h2 class="post-item post-title">  */}}
-        <a href="{{ .Permalink }}">{{ .Title }}</a>
-        <span>{{ .Date.Format "2006-01-02" }}</span>
-    {{/*  </h2>  */}}
+    {{ with .Params.player }}
+    <div id="post-aplayer"></div>
+    {{ end }}
+    <!-- post main content -->
+    <div class="post-content markdown-body">
+        {{ .Content }}
+    </div>
+</article>
+<!-- post license -->
+{{ if and (or .Site.Params.showLicense .Params.showLicense) (ne .Params.showLicense false) }}
+<div class="license markdown-body">
+    <blockquote>
+        <p>{{ i18n "postCopyrightFront" }}<a rel="license" href="{{ .Site.Params.licenseLink }}"
+               target="_blank">{{ .Site.Params.license }}</a>{{ i18n "postCopyrightEnd" }}</p>
+    </blockquote>
 </div>
 {{ end }}
-
-<!-- custom smart pagination -->
-{{ $offsetLinks := 2 }}
-{{ $maxLinks := (add (mul $offsetLinks 2) 1) }}
-{{ $lowerLimit := (add $offsetLinks 1) }}
-{{ $upperLimit := (sub $paginator.TotalPages $offsetLinks) }}
-{{ if gt $paginator.TotalPages 1 }}
-<div class="pagination">
-    {{ if ne $paginator.PageNumber 1 }}
-    <div class="pag-first">
-        <a href="{{ $paginator.First.URL }}"><i class="iconfont icon-caret-back-circle-sharp"></i></a>
-    </div>
-    {{ end }}
-    {{ if $paginator.HasPrev }}
-    <div class="pag-previous">
-        <a href="{{ $paginator.Prev.URL }}"><i class="iconfont icon-chevron-back-circle-sharp"></i></a>
-    </div>
-    {{ end }}
-    {{ range $paginator.Pagers }}
-    {{ $.Scratch.Set "pageNumFlag" false }}
-    {{ if gt $paginator.TotalPages $maxLinks }}
-    {{ if le $paginator.PageNumber $lowerLimit }}
-    {{ if le .PageNumber $maxLinks }}
-    {{ $.Scratch.Set "pageNumFlag" true }}
-    {{ end }}
-    {{ else if ge $paginator.PageNumber $upperLimit }}
-    {{ if gt .PageNumber (sub $paginator.TotalPages $maxLinks) }}
-    {{ $.Scratch.Set "pageNumFlag" true }}
-    {{ end }}
-    {{ else }}
-    {{ if and ( ge .PageNumber (sub $paginator.PageNumber $offsetLinks) ) ( le .PageNumber (add $paginator.PageNumber $offsetLinks) ) }}
-    {{ $.Scratch.Set "pageNumFlag" true }}
-    {{ end }}
-    {{ end }}
-    {{ else }}
-    {{ $.Scratch.Set "pageNumFlag" true }}
-    {{ end }}
-    {{ if eq ($.Scratch.Get "pageNumFlag") true }}
-    <div class="pag-item{{ if eq . $paginator }} pag-current{{ end }}">
-        <a href="{{ .URL }}">{{ .PageNumber }}</a>
-    </div>
-    {{ end }}
-    {{ end }}
-    {{ if $paginator.HasNext }}
-    <div class="pag-next">
-        <a href="{{ $paginator.Next.URL }}"><i class="iconfont icon-chevron-forward-circle-sharp"></i></i></a>
-    </div>
-    {{ end }}
-    {{ if ne $paginator.PageNumber $paginator.TotalPages }}
-    <div class="pag-last">
-        <a href="{{ $paginator.Last.URL }}"><i class="iconfont icon-caret-forward-circle-sharp"></i></a>
-    </div>
-    {{ end }}
-</div>
-{{ end }}
-
+{{ if and (.Site.Params.disqusJSApi) (ne .Params.showComments false) }}
+{{ partial "comment-disqusjs.html" . }}
+{{ else if and (.Site.Params.disqusShortname) (ne .Params.showComments false) }}
+{{ partial "comment-disqus.html" . }}
+{{ else if and (.Site.Params.utterancesRepo) (ne .Params.showComments false) }}
+{{ partial "comment-utterances.html" . }}
+{{ else }}{{ end }}
 {{ end }}

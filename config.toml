@@ -111,7 +111,7 @@ tag = "tags"
 
 [menu]
 [[menu.nav]]
-name = "home"
+name = "post"
 url = "/"
 weight = 1
 [[menu.nav]]

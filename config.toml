@@ -1,5 +1,5 @@
 baseURL = "/"
-title = "@qrui"
+title = "Ruì Qiū's blog"
 
 disableKinds = ["taxonomy"]
 enableEmoji = true
@@ -32,7 +32,7 @@ post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
 
 [params]
 author = "Qiū Ruì" # You can also set author in post front matter individually
-subTitle = "Half data viz tinkering, half chaos." 
+subTitle = "@rexarski <- rbind(data_tinkering, chaos)" 
 
 # Use CloudFlare Workers to accelerate the Google Analytics
 # If you are using this please comment the googleAnalytics above
@@ -122,10 +122,10 @@ weight = 2
 name = "now"
 url = "/now/"
 weight = 3
-[[menu.nav]]
-name = "project"
-url = "/project/"
-weight = 4
+# [[menu.nav]]
+# name = "project"
+# url = "/project/"
+# weight = 4
 [[menu.nav]]
 name = "archives"
 url = "/archives/"

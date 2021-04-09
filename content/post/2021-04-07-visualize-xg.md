@@ -4,6 +4,7 @@ date: 2021-04-07T22:38:00+10:00
 slug: "visualize-xg"
 description: "A visualization of expected goals in soccer."
 draft: false
+image: /image/visualize-xg/18720-Chelsea-vs-West%20Bromwich%20Albion-xg-timeline.png
 tags: ["Soccer", "Visualization", "xG"]
 math: true
 showToc: true

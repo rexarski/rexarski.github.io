@@ -160,22 +160,18 @@ name = "keybase"
 url = "https://keybase.io/rexarski/chat"
 weight = 5
 [[menu.link]]
-name = "newsletter"
-url = "https://world.hey.com/qrui"
-weight = 6
-[[menu.link]]
 name = "pinboard"
 url = "https://pinboard.in/u:rexarski"
-weight = 7
+weight = 6
 [[menu.link]]
 name = "telegram"
 url = "https://t.me/itsnopie"
-weight = 8
+weight = 7
 [[menu.link]]
 name = "twitter"
 url = "https://twitter.com/rexarski"
-weight = 9
+weight = 8
 [[menu.link]]
-name = "douban"
+name = "豆瓣"
 url = "https://www.douban.com/people/rexarski/"
-weight = 10
+weight = 9

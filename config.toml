@@ -12,8 +12,8 @@ theme = "fuji"
 defaultContentLanguage = "en" # For HTML page, now support: en, zh-hans, zh-hant, ja, nl
 languageCode = "en" # For RSS, view https://www.rssboard.org/rss-language-codes
 
-paginate = 20 
-summaryLength = 30 # Custom summary length, add <!--more--> in post file to custom split point
+paginate = 30 
+summaryLength = 50 # Custom summary length, add <!--more--> in post file to custom split point
 
 googleAnalytics = "UA-80926729-1" # Set your Google Analytics UA here
 
@@ -58,9 +58,10 @@ description = "A blog of Qiū Ruì"
 og = "/img/open_graph.png" # This will use the image called og.png in static/img folder
 
 # Posts shown in homepage
-mainSections = ["post"]
+mainSections = ["post", "zh-post"]
 nopieSections = ["nopie"]
 projectSections = ["project"]
+zhSections = ["zh-post"]
 
 # Bangumi image chart id
 # bgmImageChart = "000000"
@@ -115,29 +116,33 @@ name = "post"
 url = "/"
 weight = 1
 [[menu.nav]]
+name = "中文"
+url = "/zh-post/"
+weight = 2
+[[menu.nav]]
 name = "不画饼周报"
 url = "/nopie/"
-weight = 2
+weight = 3
 [[menu.nav]]
 name = "now"
 url = "/now/"
-weight = 3
+weight = 4
 # [[menu.nav]]
 # name = "project"
 # url = "/project/"
-# weight = 4
+# weight = 5
 [[menu.nav]]
 name = "archives"
 url = "/archives/"
-weight = 5
+weight = 6
 [[menu.nav]]
 name = "search"
 url = "/search/"
-weight = 6
+weight = 7
 [[menu.nav]]
 name = "rss"
 url = "/index.xml"
-weight = 7
+weight = 8
 
 [[menu.link]]
 name = "gallery"

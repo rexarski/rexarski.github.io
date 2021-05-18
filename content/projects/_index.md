@@ -28,6 +28,7 @@ noLicense: true
 
 ### Previously
 
+- *@canberramapbot (2020).* A Twitter bot posts bird's-eye views over Canberra periodically. [GitHub](https://github.com/rexarski/canberramapbot). [Twitter](https://twitter.com/canberramapbot).
 - *sentRy (2020)*. A telegram bot monitoring Django error logs. [Blog](/post/2020-02-14-sentry/). [GitHub](https://github.com/rexarski/sentRy).
 - *aussie (2019)*. Scraped over 76,000 courses offered by some top Australian unis in 2020. [GitHub](https://github.com/rexarski/aussie).
 - *pokeswapR (2019)*. Random color swapping between Pokémons. [Blog](/post/2019-04-17-pokemon-recoloring/). [GitHub](https://github.com/rexarski/pokeswapR).

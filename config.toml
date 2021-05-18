@@ -116,7 +116,7 @@ name = "post"
 url = "/"
 weight = 1
 [[menu.nav]]
-name = "中文"
+name = "博文"
 url = "/zh-post/"
 weight = 2
 [[menu.nav]]
@@ -127,10 +127,10 @@ weight = 3
 name = "now"
 url = "/now/"
 weight = 4
-# [[menu.nav]]
-# name = "project"
-# url = "/project/"
-# weight = 5
+[[menu.nav]]
+name = "projects"
+url = "/projects/"
+weight = 5
 [[menu.nav]]
 name = "archives"
 url = "/archives/"

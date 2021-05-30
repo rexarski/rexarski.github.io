@@ -1,10 +1,10 @@
 // wtb covered
 
-// @import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 $body-font:
-'Merriweather',
 'Lato',
+'Roboto',
 -apple-system,
 BlinkMacSystemFont,
 'SF Pro Text',
@@ -23,8 +23,7 @@ $mono-font: 'Cascadia Code',
 'Fira Code',
 'Consolas',
 $body-font;
-$title-font: 'Merriweather', 'Montserrat',
-'Product Sans',
+$title-font: 'Merriweather', 'Montserrat', 'Product Sans',
 $body-font;
 $body-font-size: 16px;
 

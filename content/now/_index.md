@@ -39,7 +39,7 @@ My email address is `qrui at hey dot com`.
     - [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
     - [Mastering Shiny](https://mastering-shiny.org/) by Hadley Wickham
   - NLP
-    - [Text Mining with R](https://www.tidytextmining.com/) by
+    - [Text Mining with R](https://www.tidytextmining.com/) by Julia Silge & David Robinson
   - Visualization
     - [Fullstack D3](https://www.newline.co/fullstack-d3) by Amelia Wattenberger
     - [Interactive Data Visualization for the Web](https://www.oreilly.com/library/view/interactive-data-visualization/9781491921296/) by Scott Murray

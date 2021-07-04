@@ -1,6 +1,6 @@
 ---
 title: "Now"
-date: "2021-02-03T17:03:32+10:00"
+date: "2021-07-04T15:03:32+10:00"
 noLicense: true
 ---
 
@@ -27,3 +27,29 @@ Previously:
 My email address is `qrui at hey dot com`.
 
 > This page is inspired by [nownownow](https://nownownow.com/about). It serves as a common "about" page but highlights what I am doing instead of who I am.
+
+## Recommendation List
+
+- Books
+  - Python
+    - [Machine Learning with Python Cookbook](https://www.oreilly.com/library/view/machine-learning-with/9781491989371/) by Chris Albon
+  - R
+    - [R in Action, 2nd ed](https://www.manning.com/books/r-in-action-second-edition) by Robert Kabacoff
+    - [R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham & Garret Grolemund
+    - [Advanced R](https://adv-r.hadley.nz/) by Hadley Wickham
+    - [Mastering Shiny](https://mastering-shiny.org/) by Hadley Wickham
+  - NLP
+    - [Text Mining with R](https://www.tidytextmining.com/) by
+  - Visualization
+    - [Fullstack D3](https://www.newline.co/fullstack-d3) by Amelia Wattenberger
+    - [Interactive Data Visualization for the Web](https://www.oreilly.com/library/view/interactive-data-visualization/9781491921296/) by Scott Murray
+
+- YouTube Channels
+  - [David Robinson](https://www.youtube.com/channel/UCeiiqmVK07qhY-wvg3IZiZQ)
+  - [Explore Explain](https://www.youtube.com/channel/UCIPsLvCpZYwvSurkb1DLLZg)
+  - [Friends of Tracking](https://www.youtube.com/channel/UCUBFJYcag8j2rm_9HkrrA7w)
+  - [Observable](https://www.youtube.com/channel/UCCD2tAKN32ya7V639gkbWhg)
+  - [Python Programmer](https://www.youtube.com/channel/UC68KSmHePPePCjW4v57VPQg)
+  - [TidyTuesday](https://www.youtube.com/user/safe4democracy)
+  - [TidyX](https://www.youtube.com/channel/UCP8l94xtoemCH_GxByvTuFQ)
+  - [Tina Huang](https://www.youtube.com/channel/UC2UXDak6o7rBm23k3Vv5dww)

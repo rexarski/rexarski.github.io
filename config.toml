@@ -32,7 +32,7 @@ post = "/:section/:filename/" # Custom post links, e.g. "/:year/:month/:title/"
 
 [params]
 author = "Qiū Ruì" # You can also set author in post front matter individually
-subTitle = "@rexarski <- rbind(data_tinkering, chaos)" 
+subTitle = "@rexarski <- bind_rows(data_tinkering, chaos) |> ggplot()" 
 
 # Use CloudFlare Workers to accelerate the Google Analytics
 # If you are using this please comment the googleAnalytics above

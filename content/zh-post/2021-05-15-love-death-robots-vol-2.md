@@ -1,5 +1,5 @@
 ---
-title: "Love, Death & Robots Volume 2"
+title: "爱死机第二季"
 date: 2021-05-15T20:00:00+10:00
 slug: "love-death-robots-vol-2"
 description: "《爱，死亡&机器人》第二季的观影体验。"
